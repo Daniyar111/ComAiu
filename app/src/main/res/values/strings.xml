@@ -7,6 +7,13 @@
     <string name="title_news">News</string>
     <string name="title_timetable">Timetable</string>
 
-    <string name="computer_science">Computer Science Department</string>
     <string name="aiu">Ala-Too International University</string>
+    <string name="bachelor">Bachelor program</string>
+    <string name="computer_science">Computer Science Department</string>
+    <string name="contact_us">Contact us</string>
+    <string name="exit">Exit</string>
+    <string name="labs">Labs</string>
+    <string name="master_degree">Master degree</string>
+    <string name="stuff">Department Stuff</string>
+
 </resources>
