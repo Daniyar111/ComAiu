@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ComAlaTooMobile</string>
+
+    <string name="title_final">Final</string>
+    <string name="title_home">Home</string>
+    <string name="title_midterm">Midterm</string>
+    <string name="title_news">News</string>
+    <string name="title_timetable">Timetable</string>
+
+    <string name="computer_science">Computer Science Department</string>
+    <string name="aiu">Ala-Too International University</string>
+</resources>
