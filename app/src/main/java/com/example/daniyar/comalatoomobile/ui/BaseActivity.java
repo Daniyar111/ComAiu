@@ -39,6 +39,6 @@ public abstract class BaseActivity extends AppCompatActivity{
                 .withName(R.string.computer_science)
                 .withEmail(R.string.aiu)
                 .withIcon(R.drawable.cs_logo);
-        
+
     }
 }
