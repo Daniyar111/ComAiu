@@ -7,7 +7,7 @@ The project of 3rd grade students of AIU.<br><br>
   <li>Changylov Daniyar - mobile application</li> 
 </ul>
 
-
+<br>
 Our Web Project:
 <h3>ComAiu</h3>
 https://github.com/Azamatjon/csaiu.git
