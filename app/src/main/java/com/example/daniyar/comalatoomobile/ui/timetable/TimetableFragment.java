@@ -29,7 +29,6 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
         mPresenter.bind(this);
 
         mViewPagerItems = new ArrayList<>();
-
 //        mViewPagerItems.add(new ViewPagerItem())
     }
 
