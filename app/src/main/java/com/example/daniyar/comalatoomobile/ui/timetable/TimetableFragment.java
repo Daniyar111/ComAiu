@@ -6,11 +6,15 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.example.daniyar.comalatoomobile.R;
+import com.example.daniyar.comalatoomobile.data.entity.ViewPagerItem;
 import com.example.daniyar.comalatoomobile.ui.BaseFragment;
+
+import java.util.ArrayList;
 
 public class TimetableFragment extends BaseFragment implements TimetableContract.View{
 
     private TimetablePresenter mPresenter;
+    private ArrayList<ViewPagerItem> mViewPagerItems;
 
     @Override
     protected int getViewLayout() {
@@ -24,7 +28,8 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
         mPresenter = new TimetablePresenter();
         mPresenter.bind(this);
 
-
+        mViewPagerItems = new ArrayList<>();
+//        mViewPagerItems.add(new ViewPagerItem())
     }
 
     @Override
