@@ -14,7 +14,7 @@ public class TimetableSubjectsFragment extends BaseFragment implements Timetable
 
     @Override
     protected int getViewLayout() {
-        return R.layout.fragment_timetable_day;
+        return 0;
     }
 
     @Override
