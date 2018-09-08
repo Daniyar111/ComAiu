@@ -44,7 +44,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Drawer.O
     protected void getDrawer(){
 
         ProfileDrawerItem profileDrawerItem = new ProfileDrawerItem()
-                .withName(R.string.computer_science)
+                .withName(R.string.computer_science_dep)
                 .withEmail(R.string.aiu)
                 .withIcon(R.drawable.cs_logo);
 
@@ -65,24 +65,29 @@ public abstract class BaseActivity extends AppCompatActivity implements Drawer.O
                 .withIdentifier(2)
                 .withIcon(R.drawable.ic_account_balance_black_24dp);
 
+        PrimaryDrawerItem academicCalendarDrawerItem = new PrimaryDrawerItem()
+                .withName(R.string.academic_calendar)
+                .withIdentifier(3)
+                .withIcon(R.drawable.ic_date_range_black_24dp);
+
         PrimaryDrawerItem stuffDrawerItem = new PrimaryDrawerItem()
                 .withName(R.string.stuff)
-                .withIdentifier(3)
+                .withIdentifier(4)
                 .withIcon(R.drawable.ic_person_black_24dp);
 
         PrimaryDrawerItem labsDrawerItem = new PrimaryDrawerItem()
                 .withName(R.string.labs)
-                .withIdentifier(4)
+                .withIdentifier(5)
                 .withIcon(R.drawable.ic_computer_black_24dp);
 
         PrimaryDrawerItem contactDrawerItem = new PrimaryDrawerItem()
                 .withName(R.string.contact_us)
-                .withIdentifier(5)
+                .withIdentifier(6)
                 .withIcon(R.drawable.ic_perm_contact_calendar_black_24dp);
 
         PrimaryDrawerItem exitDrawerItem = new PrimaryDrawerItem()
                 .withName(R.string.exit)
-                .withIdentifier(6)
+                .withIdentifier(7)
                 .withIcon(R.drawable.ic_exit_to_app_black_24dp);
 
         mDrawer = new DrawerBuilder()
@@ -93,6 +98,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Drawer.O
                 .withToolbar(mToolbar)
                 .addDrawerItems(bachelorDrawerItem,
                         masterDrawerItem,
+                        academicCalendarDrawerItem,
                         stuffDrawerItem,
                         labsDrawerItem,
                         new DividerDrawerItem(),
@@ -121,6 +127,9 @@ public abstract class BaseActivity extends AppCompatActivity implements Drawer.O
 
                 break;
             case 6:
+
+                break;
+            case 7:
 
                 break;
         }

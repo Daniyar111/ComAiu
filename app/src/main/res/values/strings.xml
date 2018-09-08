@@ -1,19 +1,514 @@
 <resources>
     <string name="app_name">ComAlaTooMobile</string>
 
+    <!--menu-->
     <string name="title_final">Final</string>
     <string name="title_home">Home</string>
     <string name="title_midterm">Midterm</string>
     <string name="title_news">News</string>
     <string name="title_timetable">Timetable</string>
 
+    <!--navigation drawer-->
     <string name="aiu">Ala-Too International University</string>
     <string name="bachelor">Bachelor program</string>
-    <string name="computer_science">Computer Science Department</string>
+    <string name="computer_science_dep">Computer Science Department</string>
     <string name="contact_us">Contact us</string>
     <string name="exit">Exit</string>
     <string name="labs">Labs</string>
     <string name="master_degree">Master degree</string>
     <string name="stuff">Department Stuff</string>
+    <string name="academic_calendar">Academic calendar</string>
 
+    <!--home-->
+    <string name="what_is_cs">What is Computer Science</string>
+    <string name="cs_short_description">
+        Computers and the Internet are having a great impact on human life and on society.
+        Our lives, starting in the second half of the twentieth century, have become computerized "at the speed of light."
+        We now live in times referred to as the computer age, the information age, or the Internet age.
+        The Computer Engineering Department offers a unique opportunity for bright young minds to excel themselves in the areas of computer science, computer software, and computer hardware.
+    </string>
+    <string name="our_vision">Our vision</string>
+    <string name="vision_first">to develop research projects that will receive international recognition</string>
+    <string name="vision_second">to engage our students in those projects that will enable them to find jobs easily all over the world</string>
+    <string name="our_mission">Our mission</string>
+    <string name="mission_first">to educate our students with state-of-the-art computer engineering knowledge that emphasizes both theoretical and practical aspects</string>
+    <string name="mission_second">to provide our students with the necessary computer engineering background that will enable them in finding jobs all over the world</string>
+    <string name="mission_third">to enrich our students with high moral and ethical values</string>
+    <string name="mission_forth">to engage our students in social activities which will improve their leadership skills</string>
+    <string name="our_merits_and_principles">Our merits and principles</string>
+    <string name="merits_first">excellence in teaching and research</string>
+    <string name="merits_second">loyalty to ethical issues</string>
+    <string name="merits_third">professional and dedicated working habits</string>
+    <string name="merits_forth">alert to technological changes</string>
+
+    <!--news-->
+    <string-array name="news_date">
+        <item>MAY 14, 2018</item>
+        <item>MARCH 26, 2018</item>
+        <item>FEBRUARY 13, 2018</item>
+        <item>MAY 30, 2017</item>
+        <item>APRIL 21, 2017</item>
+        <item>APRIL 7, 2017</item>
+        <item>MARCH 3, 2017</item>
+        <item>SEPTEMBER 29, 2016</item>
+        <item>APRIL 30, 2016</item>
+        <item>JANUARY 22, 2015</item>
+    </string-array>
+    <string-array name="news_name">
+        <item>Bike Ride AIU 2018</item>
+        <item>"Ala-Too" stands for a clean city!</item>
+        <item>AIU is glad to welcome Professor from U.S.!</item>
+        <item>Akkula-Tank - 2017</item>
+        <item>Career day</item>
+        <item>The doors of the SAB Incubation Center at the university are open to all comers who want to create their own start-up!</item>
+        <item>Seminar from O!</item>
+        <item>Congratulations!</item>
+        <item>Career Day</item>
+        <item>Guest from Google</item>
+    </string-array>
+    <string-array name="news_description">
+        <item>Today "Ala-Too" International University in partnership with the company "Kirbi" and with the support of the Bishkek City Hall held a Bike Ride, accompanied by ambulance and police cars.
+The bike ride, which gathered cyclists started at the "Ala-Too" International University and ended in the Victory Park named after Dair Asanov at the South Gate.
+At the finish a warm meeting awaited, where the company "Kirbi" treated everyone with delicious prizes-chips and croutons.
+More than 120 people took part in this event! We thank all the participants for their participation and active life position !!!
+And we would like to note that this is not the last such event, so stay with us and stay tuned !!!</item>
+        <item>Within the framework of the projects "Taza Koom" and "Taza Shaar", students, teachers and administration of the university, a total of 150 people, took part in the "subbotnik"-cleaning. We would like to emphasize that the spring has just come and our university will readily take part in the further cleaning of the city and not only.</item>
+        <item>During Spring Semester of 2017-2018 Academic Year, FulBright Assoc. Prof. Curt Schurgers from University of San Diego, California, U.S,  will be teaching Robotics and Electrotechniques at Ala-Too International University for students of New Technologies faculty.
+In this semester there are planned various projects related with robotics, i.e. musical instrument, walking robot, line following cars and other types of autonomous electronic projects.
+By the end of this semester our students will :
+    1. gain programming and electronic skills,
+    2. be able to build and develop mobile robots.</item>
+        <item>May 20, 2017 at the International Alatoo University held an investment show "Akkula-Tank". Its organizers were the SAB Incubation Center at the International University "Ala-Too", CreaLab at the Kyrgyz Economic University and the ISC "Entrepreneurship Development Fund" OJSC. The event was supported by the project "I invest in Kyrgyzstan" and the telecommunications operator "Sky Mobile".
+The main concept of the investment show is the creation of a unique platform for the presentation, discussion and promotion of business ideas for start-up entrepreneurs, as well as initiating a dialogue between start-ups and potential investors.
+
+14 innovative projects were presented, which were evaluated by the members of the Bid Evaluation Committee on the following criteria:
+
+• The impact of the idea / project on society;
+• The urgency and novelty of the idea;
+• Hypotheses tested in the market;
+• Monetization
+
+Team: a combination of talents, a variety of skills and experience
+3 projects were awarded by jury-investors and received investments for further development.
+
+1. The "TMS" project, whose goal is to create a media portal and maintain the rating of the media stream in Kyrgyzstan, received an investment of 300 thousand soms;
+2. The founders of the "BooDoo" project, who produce the most delicious baked donuts in the city and want to expand, received funding of 100 thousand soms;
+3. And the guys with the project "Smart Study" are inspired by the idea of ​​preparing our graduates for ORT testing through the site and the mobile application and make every effort to implement it. They will receive their investment with the beginning of the new school year.
+
+The event was accompanied by a dynamic show program with elements such as a presentation of the 3D Printer Project from Sanarip Electronics, a laser show, as well as the performance of KVN Kelechek and Kyrgyz stars.</item>
+        <item>April 20, 2017 IAAU held Career Day which was organized for students of 2nd, 3rd and 4th  courses. To this  event such companies and organizations were invited  as Beeline, Kyrgyz concept, Deloitte &amp; Touche LLC2017, Azattyk, Hyatt Regency, The London School of Languages and Cultures, AIESEC, Workland, KICB bank, NESTLE, Akun, UNUM, Commercial Bank of Kyrgyzstan , Bank of Asia, ABA TUR GROUP, Youth Initiatives Development Foundation, El sozduk, National Red Crescent Society, "Orion" and "Rainbow" centers. The program began at 10:00 am with the official speech of rector and presentations from the companies. After, the students were able to learn more about internship programs, practices and vacancies from the representatives of companies.
+This event is held for the second year in our university and is conducted for students of the last and penultimate courses in order to support and assist in choosing a future career.</item>
+        <item>At April 4, 2017 was the grand opening of  the SAB Incubation Center at  the International Alatoo University.
+ Students, teachers, young entrepreneurs, as well as guests from Japan visited our center, which is characterized by creative design and modern equipment.
+ Active discussions were held on the topic of start-up and new ideas for development. Participants had the opportunity to create their own team or become partners of existing teams.
+ The event was accompanied by a coffee break and tasty cap-cakes.</item>
+        <item>Business incubation center (SAB) and O! company organized seminar for the students from the new technology faculty. Specialists from O! shared their experience and knowledge with the students on what kind of hard skills and soft skills are required to work at the O! company.
+There was a huge interest and lots of questions  from the students.</item>
+        <item>The most attractive university for the good news, the university lecturer Erdolatov Sanjarbek Saypidinoviç successfully defended her scientific pedagogy, joined the ranks of the scientific environment.
+  Mr. Joko, healthy family and always have with us today! A teacher at a scientific guide to the path of peace and dive to survive, and they are many!
+  Theme: based on the use of information technology for improving the quality of students' education in the technical sphere
+(Example of teaching Informatics)
+13.00.01 - general pedagogy, pedagogy and  education history major thesis for a candidate degree in pedagogical sciences.</item>
+        <item>On April 21, International Ataturk-Alatoo University organized  Career Day. On this day students of 3rd, 4th and 5th courses had the opportunity to meet with large companies to do an internship or find a job.
+
+ The purpose of this event is to create a platform for students and employers, where students and graduates can find job, set business relations, and for employers -  find qualified staff, share their experiences and talk about career opportunities in their companies.
+
+ The companies as Coca-Cola, Demir Bank, KICB Bank, Optima Bank, Commercial Bank of Kyrgyzstan, confectionery companies - Yashar and ATA, LION, Fly Dubai, Megacom, ATN Police, as well as organizations such as the Business Association JIA, American Chamber of Commerce in the Kyrgyz Republic (AmCham), the Kyrgyz-Turkish Society Predprinrimateley (KITIAD) were invited to the event.
+
+ The official part of the program was opened by the speech of  Rector - Osman Gökalp. Further, the companies provided students with the  information about internships  and possible vacancies.
+
+Also, university souvenirs were presented   to company representatives.</item>
+        <item>December 23 we  invited graduate of our University Maksat Musayev, who now works at Google, he held a seminar in which he told about himself and  about work in Google.
+
+Maksat Musayev went  7 to  8 grade in the Kyrgyz-Turkish Lyceum named Hussein Karasaeva in Karakol, after the 8th grade, he was transferred to  KTL named Chyngyz Aitmatov, where he studied until the 11th grade.
+
+In 2006 he entered the department of finance and credit in MUAA. After graduation he began to study in graduate programs in the Central European University in Budapest on Economic Policy in Global Market.
+
+ A month before the end  the CEU, Maksat began submit resume in many firms, including Google. After which it began to receive job offers from Google and other companies. He said that Google make interview 3 times, 2 of them on the phone. As soon as  took him on the job, the company immediately send Maksat to practice (training) in Dublin for 2 weeks. Maksat also talked about the things that he likes in Google: free food, Play Station, free schedule and friendly staff. The first impression of young Kyrgyz - had a very large flow of information, which was hard to master, but Maksat said"Patience and hard work-makes all easier ." Maksat works in the department of customer support small and medium businesses. At this point, he worked in Google 1 year and 6 months.
+
+After Maksat Musayev's talk, the students began to ask questions.
+
+1 question Nursultan Mainazarov : What are the problems you faced in Google?
+
+The main problem is - a huge pace of work. If you want to get a good job, you have to be creative people. I give myself a limit of 5-6 years at one job, so I'm working on maximum to get the result in 5 years I have to show , see , learn and to return to Kyrgyzstan
+
+2 question from a student  5th year branch of the global economy: Google - an IT company,how they took you with the formation of the financier?
+
+Google is not entirely composed of IT departments, there also  support different  segments. Google - the place for all different directions, any position?
+
+3 question from a student of International Relations Manas:
+
+Whom do you see yourself in 4 years?
+
+It does not matter whom, important to remain human, no one can take away this. Just stay as human and dream - thoughts materialize.
+
+4 question from a student of computer engineering Omurbek:
+
+Got what you wanted?
+
+"The World is Not Enough." Desires are endless. If you can not be satisfied, you'll be the most miserable person.
+
+5 question from a students of management department Karim:with receipt in university  appeared desires and goals? When you have  a purpose?
+
+
+
+Also at the university. I remember we were up 8-9 in the evening. It was fun. Here given a chance for self-realization MUAA gives maximum and more.
+
+This concludes our seminar Thank Maxat Musaeva, for your time and come.</item>
+    </string-array>
+
+    <!--bachelor program courses-->
+    <string name="bp_courses">Courses</string>
+    <string-array name="bp_courses">
+        <item>CS 100: Introduction to Computer Science and Engineering</item>
+        <item>CS 101: Programming Languages-1</item>
+        <item>CS 102: Programming Languages-2</item>
+        <item>CS 103: Calculus-1</item>
+        <item>CS 104: Calculus-2</item>
+        <item>CS 105: Physics-1 (Mechanics)</item>
+        <item>CS 106: Physics-2 (Electricity and Magnetism)</item>
+        <item>CS 108: Engineering Computer Graphics</item>
+        <item>CS 201: Object Oriented Programming</item>
+        <item>CS 202: Data Structures</item>
+        <item>CS 203: Web Technologies</item>
+        <item>CS 204: Web Programming</item>
+        <item>CS 205: Database Systems</item>
+        <item>CS 206: Digital Electronics</item>
+        <item>CS 207: Discrete Mathematics</item>
+        <item>CS 208: Linear Algebra</item>
+        <item>CS 209: Electrotechnics &amp; Electronics</item>
+        <item>CS 301: Design &amp; Analysis of Algorithms</item>
+        <item>CS 302: Artificial Intelligence</item>
+        <item>CS 303: Mobile App Development</item>
+        <item>CS 304: Operating Systems</item>
+        <item>CS 305: Software Engineering-1</item>
+        <item>CS 306: Software Engineering-2</item>
+        <item>CS 307: Computer Networks &amp; Telecommunication</item>
+        <item>CS 308: Computer Organization &amp; Architecture</item>
+        <item>CS 309: Probability and Statistics</item>
+        <item>CS 310: Introduction to Marketing</item>
+        <item>CS 310: Art &amp; Design</item>
+        <item>CS 311: Introduction to Entrepreneurship</item>
+        <item>CS 319: Pedagogical Internship</item>
+        <item>CS 320: Project Based Internship</item>
+        <item>CS 401: Information Security</item>
+        <item>CS 402: Basics of Scientific Research</item>
+        <item>CS 403: Software Architecture &amp; Design patterns</item>
+        <item>CS 403: Introduction to Data Mining</item>
+        <item>CS 403: Number Theory</item>
+        <item>CS 405: Human Computer Interaction</item>
+        <item>CS 405: Introduction to Cloud Computing</item>
+        <item>CS 405: Microprocessors &amp; Microcontrollers</item>
+        <item>CS 407: Machine Learning</item>
+        <item>CS 407: System programming</item>
+        <item>CS 407: Robotics</item>
+        <item>CS 419: Industrial Internship</item>
+        <item>CS 420: Thesis Diploma</item>
+        <item>CS-RU: Russian Language</item>
+        <item>CS-EN: English Language</item>
+        <item>CS-EC: Ecology</item>
+        <item>CS-TR: Turkish Language</item>
+        <item>CS-PHS: Physical Culture</item>
+        <item>CS-GR: Geography of KGZ (State Examination)</item>
+        <item>CS-KG: Kyrgyz Language &amp; Literature</item>
+        <item>CS-HS: History (State Examination)</item>
+        <item>CS-MN: Manasology</item>
+        <item>CS_LF: Life Safety</item>
+        <item>CS-MT: Metrology, Standartization &amp; Certification</item>
+        <item>CS-PHL: Philosophy</item>
+    </string-array>
+
+    <string-array name="bp_courses_description">
+        <item>First part of the course introduces students to the profession, including the disciplines of chemical, civil, computer, electrical, environmental, and mechanical engineering. Prepares students for success through the integration of the following important skills: technical problem solving and engineering design, ethical decision-making, teamwork, and communicating to diverse audiences. Second part is aimed at students with little or no programming experience. It aims to provide students with an understanding of the role computation can play in solving problems. It also aims to help students, regardless of their major, to feel justifiably confident of their ability to write small programs that allow them to accomplish useful goals. The class will use the Python programming language.</item>
+        <item>A programming language is an artificial language designed to communicate instructions to a machine, particularly a computer. Programming languages can be used to create programs that control the behavior of a machine and/or to express algorithms precisely.	The earliest programming languages predate the invention of the computer, and were used to direct the behavior of machines such as Jacquard looms and player pianos. Thousands of different programming languages have been created, mainly in the computer field, with many more being created every year. Most programming languages describe computation in an imperative style, i.e., as a sequence of commands, although some languages, such as those that support functional programming or logic programming, use alternative forms of description.</item>
+        <item>A programming language is an artificial language designed to communicate instructions to a machine, particularly a computer. Programming languages can be used to create programs that control the behavior of a machine and/or to express algorithms precisely.	The earliest programming languages predate the invention of the computer, and were used to direct the behavior of machines such as Jacquard looms and player pianos. Thousands of different programming languages have been created, mainly in the computer field, with many more being created every year. Most programming languages describe computation in an imperative style, i.e., as a sequence of commands, although some languages, such as those that support functional programming or logic programming, use alternative forms of description.</item>
+        <item>This is a first course in the calculus of one variable intended for computer science, industrial engineering, industrial electronics and applied mathematics students. It is open to others who are qualified and desire a more rigorous mathematics course at the core level. Topics include a brief review of polynomials, trigonometric, exponential, and logarithmic functions, followed by discussion of limits, derivatives, and applications of differential calculus to real-world problem areas. An introduction to integration concludes the course.</item>
+        <item>This is a second course in the calculus of one variable intended for computer science, industrial engineering, industrial electronics and applied mathematics students. It is open to others who are qualified and desire a more rigorous mathematics course at the core level. Topics include an overview of integration, basic techniques for integration, a variety of applications of integration, and an introduction to (systems of) differential equations.</item>
+        <item>Introductory physics course, geared towards engineering majors. Equilibrium and motion of particles in one and two dimensions in the framework of Newtonian mechanics, force laws (including gravity), energy, momentum, rotational motion, conservation laws, and fluids. Examples will be drawn from astronomy, biology, sports, and current events.</item>
+        <item>Physics course geared toward engineering majors. Electricity and Magnetism should provide instruction in each of the following five content areas: electrostatics; conductors, capacitors and dielectrics; electric circuits; Electric and magnetic fields; and electromagnetism, DC and AC circuitry.</item>
+        <item>Ideally suited for designers, broadcasters, architects, engineers as well as anyone who would like to learn to create 2-dimensional and 3-dimensional study models with ease and sophistication, this course delivers a well rounded introduction to the power of Google’s SketchUp. Students are enabled to draw using a familiar pencil and paper paradigm in a software context. Google SketchUp makes 3D modeling easy enough for anyone to learn, and fast enough to use under real-world time constraints. SketchUp will allow students to demonstrate to clients what a new building will look like, recreate and fly through the scene of an accident, or visualize a theatrical set before it’s built. At the conclusion of this course, students will be comfortable creating, animating, and displaying 3D environments at a sophisticated level.</item>
+        <item>Object-oriented programming (OOP) is a programming paradigm using "objects" –i.e.instances of a class consisting of data fields and methods together with their interactions – to design applications and computer programs. Programming techniques may include features such as data abstraction, encapsulation, messaging, modularity, polymorphism, andinheritance. Many modern programming languages now support OOP, at least as an option.</item>
+        <item>In computer science, a data structure is a particular way of storing and organizing data in a computer so that it can be used efficiently. Different kinds of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. For example, B-trees are particularly well-suited for implementation of databases, while compilerimplementations usually use hash tables to look up identifiers.Data structures provide a means to manage huge amounts of data efficiently, such as large databases and internet indexing services. Usually, efficient data structures are a key to designing efficient algorithms. Some formal design methods and programming languages emphasize data structures, rather than algorithms, as the key organizing factor in software design.</item>
+        <item>HTML/XHTML Over the years Web Technologies have continued to develop so that now, virtually any type of audio-visual media can be 'carried' via the Internet.Most of these technologies however, have effectively been 'bolted-on' to the original web page construction language; Hyper Text Markup Language (HTML). You'll notice most web addresses begin with 'http://' which means 'Hyper Text Transfer Protocol', and end with .HTM or .HTML. (In case you're wondering, the 'HTM' extension is for backward-compatibility with older 'Windows' DOS computers, which had a limit of only 3 letters).</item>
+        <item>The course will introduce the student to the widely-used Java Spring framework. Spring is a light-weight framework that aims to simplify development of enterprise solutions. Discover how to wire together your Java objects using Spring and dependency injection. You'll learn how to set up your system for Spring development, how to use Gradle, and how to work with databases using Spring and Hibernate and how to create web applications with Spring MVC. We'll also look at managing user accounts with Spring Security, JDBC, working with web forms, aspect-oriented programming (AOP).</item>
+        <item>A database is an organized collection of data, today typically in digital form. The data are typically organized to model relevant aspects of reality (for example, the availability of rooms in hotels), in a way that supports processes requiring this information (for example, finding a hotel with vacancies). The term database is correctly applied to the data and their supporting data structures, and not to the database management system(DBMS). The database data collection with DBMS is called a database system. The term database system implies that the	data is managed to some level of quality (measured in terms of accuracy, availability, usability, and resilience) and this in turn often implies the use of a general-purpose database management system (DBMS). A general-purpose DBMS is typically a complex software system that meets many usage requirements to properly maintain its databases which are often large and complex. The utilization of databases is now so widespread that virtually every technology and product relies on databases and DBMSs for its development and commercialization, or even may have DBMS software embedded in it. Organizations and companies, from small to large, depend heavily on databases for their operations.</item>
+        <item>Digital Electronics TM is the study of electronic circuits that are used to process and control digital signals. In contrast to analog electronics, where information is represented by a continuously varying voltage, digital signals are represented by two discreet voltages or logic levels.</item>
+        <item>Discrete mathematics is mathematics that deals with discrete objects. Discrete objects are those which are separated from (not connected to/distinct from) each other. Integers (aka whole numbers), rational numbers (ones that can be expressed as the quotient of two integers), automobiles, houses, people etc. are all discrete objects. On the other hand real numbers which include rational as well as irrational numbers are not discrete. As you know between any two different real numbers there is another real number different from either of them. In this course we will be concerned with objects such as integers, propositions, sets, relations and functions, which are all discrete. We are going to learn concepts associated with them, their properties, and relationships among them among others.</item>
+        <item>Linear algebra is the branch of mathematics concerning finite or countably infinite dimensional vector spaces, as well as linear mappings between such spaces. Such an investigation is initially motivated by a system of linear equations in several unknowns. Such equations are naturally represented using the formalism of matrices and vectors. Linear algebra is central to both pure and applied mathematics. For instance, abstract algebra arises by relaxing the axioms of a vector space, leading to a number of generalizations.</item>
+        <item>The aim of the course is to teach students to evaluate the condition of electrical equipment and its adaptation potential as well as reveal the factors of operation improving, be able to choose the equipment professionally in order to increase productivity of foodstuff made of plants. The course consists of 3 interrelated modules representing the structural-functional communication of electric circuits theory, electromagnetic devices, fundamentals of electronics and electric measuring. The successive and systematic study of the course will provide students with knowledge of electrotechnics fundamentals, their connection with the principles of electrical equipment and electronic equipment building. The course should also teach students the essence of electromagnetic processes in an electric circuit, their dependence on energy sources and receivers as well as their significance for the efficient use of electrical equipment. This course is basic for all courses using knowledge on electrical equipment.</item>
+        <item>In mathematics and computer science, an algorithm is a step-by-step procedure for calculations. Algorithms are used for calculation, data processing, and automated reasoning. More precisely, an algorithm is an effective method expressed as a finite list of well-defined instructions for calculating a function. Starting from an initial state and initial input (perhaps empty), the instructions describe a computation that, when executed, will proceed through a finite number of well-defined successive states, eventually producing "output" and terminating at a final ending state. The transition from one state to the next is not necessarily deterministic; some algorithms, known as randomized algorithms, incorporate random input.</item>
+        <item>Artificial intelligence (AI) is the intelligence of machines and the branch of computer science that aims to create it. AI textbooks define the field as "the study and design of intelligent agents where an intelligent agent is a system that perceives its environment and takes actions that maximize its chances of success. John McCarthy, who coined the term in 1955, defines it as the science and engineering of making intelligent machines." AI research is highly technical and specialized, deeply divided into subfields that often fail to communicate with each other. Some of the division is due to social and cultural factors: subfields have grown up around particular institutions and the work of individual researchers. AI research is also divided by several technical issues. There are subfields which are focused on the solution of specific problems, on one of several possible approaches, on the use of widely differing tools and towards the accomplishment of particular applications. The central problems of AI include such traits as reasoning, knowledge, planning, learning, communication, perception and the ability to move and manipulate objects. General intelligence (or strong AI) is still among the field's long term goals.</item>
+        <item>This course is intended for students who have some prior programming experience. The course will introduce you to the basics of the Android platform, Android application components, Activities and their lifecycle, UI design, Multimedia, 2D graphics and networking support in Android.</item>
+        <item>An operating system (OS) is a collection of software that manages computer hardware resources and provides common services for computer programs. The operating system is a vital component of the system software in a computer system. Application programs require an operating system to function. Time-sharing operating systems schedule tasks for efficient use of the system and may also include accounting for cost allocation of processor time, mass storage, printing, and other resources. For hardware functions such as input and output and memory allocation, the operating system acts as an intermediary between programs and the computer hardware, although the application code is usually executed directly by the hardware and will frequently make a system call to an OS function or be interrupted by it. Operating systems can be found on almost any device that contains a computer—from cellular phones and video game consoles to supercomputers and web servers.</item>
+        <item>Software engineering (SE) is the application of a systematic, disciplined, quantifiable approach to the design, development, operation, and maintenance of software, and the study of these approaches; that is, the application of engineering to software. The term software engineering first appeared in the 1968 NATO Software Engineering Conference, and was meant to provoke thought regarding the perceived "software crisis" at the time. Software development, a much used and more generic term, does not necessarily subsume the engineering paradigm. The field's future looks bright according to Money Magazine and salary.com, which rated Software Engineer as the best job in the United States in 2006. In 2012, software engineering was again ranked as the best job in the United States, this time by careercast.com.</item>
+        <item>This course is an introduction to advanced concepts in Software Engineering. Topics include: System Re-engineering, Domain-Specific Languages, Generative Development, System Design and Service-Oriented Architecture. System Re-engineering will teach students how to integrate and maintain new systems with legacy systems. Domain-Specific Languages will use Object Management Group (OMG) standards and the Visual Paradigm CASE tool to familiarize students with model-driven software development.</item>
+        <item>The telecommunications industry includes wireless technology, computer networks, telephone systems, television, and radio. Research facilities, manufacturers, and network providers fuel this fast-paced field. The application of electrical engineering and physics has revolutionized business and personal communications by increasing transmission rates, reliability, and range. Elements of human communication including data, voice, images and movies are now transmitted in seconds around the globe. In addition, advances in technology have significantly decreased the size of communication devices.</item>
+        <item>This course will introduce students to the fundamental concepts underlying modern computer organization and architecture. Main objective of the course is to familiarize students about hardware design including logic design, basic structure and behavior of the various functional modules of the computer and how they interact to provide the processing needs of the user. It will cover machine level representation of data, instruction sets, computer arithmetic, CPU structure and functions, memory system organization and architecture, system input/output, multiprocessors, and digital logic. The emphasis is on studying and analyzing fundamental issues in architecture design and their impact on performance.</item>
+        <item>Probability and statistics are two related but separate academic disciplines. Statistical analysis often uses probability distributions, and the two topics are often studied together. However, probability theory contains much that is of mostly of mathematical interest and not directly relevant to statistics. Moreover, many topics in statistics are independent of probability theory.</item>
+        <item>This is an overview course with primary focus on marketing products and services to the ultimate consumer. Emphasis is placed on the basic marketing premise that customer needs must be satisfied in order to achieve company objectives. The student gains insight into the complex and interdependent variables involved in developing successful marketing strategies. The strategic marketing planning process is introduced, along with the specific concepts and principles involved in the four key components of the marketing plan - Product, Price, Distribution, and Promotion Strategies.</item>
+        <item>Introduction to Arts serves as a basic course for art design. This course mainly introduces elements which include the essence and system of art, the content and form of works of art, the methodology of art appreciation, theories on art development, process and key techniques of art creation, with the purpose to help students understand the key terms and methodology of art studies, to obtain the knowledge of various phenomena and cultures concerning art, to develop students’ ability to appreciate works of art before they can explore and practice in the field of art creation.</item>
+        <item>This course is designed to help students evaluate the business skills and commitment necessary to successfully operate an entrepreneurial venture and review the challenges and rewards of entrepreneurship. Students will learn about themselves, their decisions, and their goals to determine how entrepreneurship can play a role in their lives. Students will also be introduced to entrepreneurship from an economic perspective and the concepts of environmentally sustainable practices and social entrepreneurship.</item>
+        <item>Students undertake a significant experiential learning opportunity, typically with a company, non-profit, governmental, or community-based organization.  The internship represents an educational strategy that links classroom learning and student interest with the acquisition of knowledge in an applied work setting.  Through direct observation, reflection and evaluation, students gain an understanding of the internship site’s work, mission, and audience, how these potentially relate to their academic study, as well as the organization’s position in the broader industry or field.  Students will produce a critical reflection on their internship experience demonstrating how they have addressed specific learning goals.</item>
+        <item>The purpose of the project-based internship is to give students the opportunity to apply, and reflect on using, the knowledge, skills and competencies they have acquired through their M.Sc. in Computer science specialisation in real life practice. Students are thus trained in the role of being a reflective practitioner, who, on the one hand, participates in performing relevant practical tasks and, on the other hand, reflects on them from an analytical position.</item>
+        <item>Information security means protecting information and information systems from unauthorized access, use, disclosure, disruption, modification, perusal, inspection, recording or destruction. The terms information security, computer security and information assurance are frequently used interchangeably. These fields are interrelated often and share the common goals of protecting the confidentiality, integrity and availability of information; however, there are some subtle differences between them. These differences lie primarily in the approach to the subject, the methodologies used, and the areas of concentration. Information security is concerned with the confidentiality, integrity and availability of data regardless of the form the data may take: electronic, print, or other forms. Computer security can focus on ensuring the availability and correct operation of a computer system without concern for the information stored or processed by the computer. Information assurance focuses on the reasons for assurance that information is protected, and is thus reasoning about information security.</item>
+        <item>The course aims to provide in-depth knowledge of research design and methodology and to train the student in writing a study plan and critically reviewing scientific literature.</item>
+        <item>Introduction to the architecture and design of complete software systems, building on components and patterns. Topics include architectural principles and alternatives, design documentation, and relationships between levels of abstraction.</item>
+        <item>This course is an introductory course on data mining. It introduces the basic concepts, principles, methods, implementation techniques, and applications of data mining, with a focus on two major data mining functions: pattern discovery and cluster analysis.</item>
+        <item>This course is an elementary introduction to number theory with no algebraic prerequisites. Topics covered include primes, congruences, quadratic reciprocity, diophantine equations, irrational numbers, continued fractions, and partitions.</item>
+        <item>Human–computer interaction (HCI) involves the study, planning, and design of the interaction between people (users) and computers. It is often regarded as the intersection of computer science, behavioral sciences, design and several other fields of study. The term was popularized by Card, Moran, and Newell in their seminal 1983 book, The Psychology of Human-Computer Interaction, although the authors first used the term in 1980, and the first known use was in 1975. The term connotes that, unlike other tools with only limited uses (such as a hammer, useful for driving nails, but not much else), a computer has many affordances for use and this takes place in an open-ended dialog between the user and the computer.</item>
+        <item>This course provides a hands-on comprehensive study of Cloud concepts and capabilities across the various Cloud service models including Infrastructure as a Service (IaaS), Platform as a Service (PaaS), Software as a Service (SaaS), and Business Process as a Service (BPaaS). IaaS topics start with a detailed study the evolution of infrastructure migration approaches from VMWare/Xen/KVM virtualization, to adaptive virtualization, and Cloud Computing / on-demand resources provisioning.</item>
+        <item>A microprocessor incorporates the functions of a computer's central processing unit (CPU) on a single integrated circuit (IC), or at most a few integrated circuits. It is a multipurpose,programmable device that accepts digital data as input, processes it according to instructions stored in its memory, and provides results as output. It is an example of sequential digital logic, as it has internal memory. Microprocessors operate on numbers and symbols represented in the binary numeral system. The advent of low-cost computers on integrated circuits has transformed modern society. General-purpose microprocessors in personal computers are used for computation, text editing, multimedia display, and communication over the Internet. Many more microprocessors are part of embedded systems, providing digital control of a myriad of objects from appliances to automobiles to cellular phones and industrial process control.</item>
+        <item>This course provides a broad introduction to machine learning and statistical pattern recognition. Topics include: supervised learning (generative/discriminative learning, parametric/non-parametric learning, neural networks, support vector machines); unsupervised learning (clustering, dimensionality reduction, kernel methods); learning theory (bias/variance tradeoffs; VC theory; large margins); reinforcement learning and adaptive control. The course will also discuss recent applications of machine learning, such as to robotic control, data mining, autonomous navigation, bioinformatics, speech recognition, and text and web data processing.</item>
+        <item>The objective of this course is to provide you with a basic understanding of the issues involved in writing system programs on a Linux or Unix system, manipulating system processes, system io, system permissions, files, directories, signals, threads, sockets, terminal, etc. Since the operating system discussed will be Linux, an intermediate knowledge of the Linux Operating System is assumed. In addition, students are expected to have an intermediate knowledge of the C (or C++) programming language and knowledge of the theory of multiprocessing operating systems.</item>
+        <item>Robotics is the branch of technology that deals with the design, construction, operation and application of robots and computer systems for their control, sensory feedback, and information processing. These technologies deal with automated machines that can take the place of humans, in hazardous or manufacturing processes, or simply just resemble humans. Many of today's robots are inspired by nature contributing to the field of bio-inspired robotics. The concept and creation of machines that could operate autonomously dates back to classical times, but research into the functionality and potential uses of robots did not grow substantially until the 20th century. Throughout history, robotics has been often seen to mimic human behavior, and often manage tasks in a similar fashion. Today, robotics is a rapidly growing field, as we continue to research, design, and build new robots that serve various practical purposes, whether domestically, commercially, or militarily. Many robots do jobs that are hazardous to people such as defusing bombs, exploring shipwrecks, and mines.</item>
+        <item>The Internship aims to offer students the opportunity to apply their knowledge in real-life environments through an industry placement for eight-weeks. It is expected that the skills students will gain from working with an organization will help them perform better on their jobs after graduation. In addition, the Internship greatly increases the chances for students to obtain full time employment after graduation.</item>
+        <item>The final educational-research project carried out by a student graduating from a university.</item>
+        <item>This Russian language course is highly intensive and has the goal to help you achieve the required level of Russian in order to study at graduate levels in universities. This program is aimed at developing skills in: russian grammar, oral communication, making notes and understanding lectures, participating in seminars, writing essays and reports, listening to spoken Russian, reading and writing.</item>
+        <item>Of the 7.6 billion people in the world, it is estimated that over 1.1 billion speak English, both as a first and second language, making it the most widely spoken language in the world. It is the official language in at least 50 countries, but the beauty of the English language is how it has been ‘adopted’ as a second language by so many people in so many countries around the world. Since this language is needed in the programming sphere, each student is attached this subject.</item>
+        <item>Ecology is the scientific study of the interaction of organisms with each other and their physical, chemical and biological environment. Environmental sciences, by contrast, integrates biological, chemical and physical sciences to understand our changing environment. A combination of the two is vital for understanding and tackling these global issues. The study of ecological and environmental sciences will appeal to students with an interest in the diversity of the natural world and those concerned with environmental issues.</item>
+        <item>This Turkish language course covers the basics of communicating in Turkish. Students learn the sounds and pronunciations of letters through class lectures, class readings and in-class practice. Verb usage and conjugation are not part of the class. Instead, students learn basic vocabulary and common expressions needed for everyday life.</item>
+        <item>This course is designed to investigate and apply the basic concepts and principles of lifetime physical fitness and other health-related factors. Emphasis is placed on wellness through the study of nutrition, weight control, stress management, and consumer facts on exercise and fitness. Upon completion, students should be able to plan a personal, lifelong fitness program based on individual needs, abilities, and interests.</item>
+        <item>Geography is a part of bachelor degree program that focuses on location, landscape of Kyrgyzstan etc.</item>
+        <item>This subject is both a continuation of the school curriculum for improving knowledge for the Kyrgyz people and for beginning studies by foreigners.</item>
+        <item>The aim of the program is to help graduates of non-historical faculties in preparing for the state exam on the history of Kyrgyzstan. The program aims students to in-depth study and understanding of the actual problems of the history of Kyrgyzstan, revealing the main laws and directions of its historical development.</item>
+        <item>Manasology is a separate line of research within Kyrgyz studies, which looks into the scientific study of the Kyrgyz Manas epic. Representatives of this scientific area are called manasologists.</item>
+        <item>The publication Life Safety Code, known as NFPA 101, is a consensus standard widely adopted in the United States. It is administered, trademarked, copyrighted, and published by the National Fire Protection Association and, like many NFPA documents, is systematically revised on a three year cycle. Despite its title, the standard is not a legal code, is not published as an instrument of law, and has no statutory authority in its own right. However, it is deliberately crafted with language suitable for mandatory application to facilitate adoption into law by those empowered to do so.</item>
+        <item>METROLOGY AND STANDARDIZATION GOST (Russian: ГОСТ) refers to a set of technical standards maintained by the Euro-Asian Council for Standardization, Metrology and Certification (EASC), a regional standards organization operating under the auspices of the Commonwealth of Independent States (CIS). All sorts of regulated standards are included, with examples ranging from charting rules for design documentation to	recipes and nutritional facts of Soviet-era brand names (which have now become generic, but may only be sold under the label if the technical standard is followed, or renamed if they are reformulated). GOST standards were originally developed by the government of the Soviet Union as part of its national standardization strategy. The word GOST (Russian: ГОСТ) is an acronym forgosudarstvennyy standart, which means state standard. The history of national standards in the USSR can be traced back to 1925, when a government agency, later named Gosstandart, was established and put in charge of writing, updating, publishing, and disseminating the standards. After World War II, the national standardization program went through a major transformation. The first GOST standard, GOST 1State Standardization System, was published in 1968. The following countries have adopted GOST standards in addition to their own, nationally developed standards: Russia, Belarus, Ukraine,Moldova, Kazakhstan, Azerbaijan, Armenia, Kyrgyzstan, Uzbekistan, Tajikistan, Georgia, and Turkmenistan.</item>
+        <item>This course introduces and explores the main principles and methods of Critical Thinking: distinguishing between good and bad arguments; identifying common fallacies; developing strong and persuasive arguments; the difference between deductive and inductive reasoning; constructing logical proofs; the nature of scientific, moral, and legal reasoning; evaluating polls and statistical hypotheses; understanding probability; deciding how to act under uncertainty. Students will apply these principles and methods to numerous academic and 'everyday' contexts, including journals, the print press, blogs, political rhetoric, advertising and documentaries. We will regularly reflect upon more broadly philosophical matters related to Critical Thinking - such as the nature of truth and objectivity and the distinction between science and pseudo-science - and examine a number of intriguing philosophical paradoxes. Students will improve their skills in writing clear and compelling argumentative papers and critically analyzing the writings of others. Course work includes reading, class discussion, regular homework assignments, quizzes, and short argumentative essays.</item>
+    </string-array>
+
+    <!--bachelor program exam rules-->
+    <string name="exam_rules">Rules for Examinations</string>
+    <string-array name="rules">
+        <item>Only students in the “Examination List” will be allowed to take the examination.</item>
+        <item>Students must appear at the examination room at least ten minutes before the beginning of the examination.</item>
+        <item>Candidates shall bring their photo identification (signed Photo ID) and place on their desks. It includes: AIU ID Card OR valid Passport OR valid Driver’s License.</item>
+        <item>Coats, jackets, knapsacks, purses, pencil cases, notes and books are to be deposited in areas designated by the Observer(s) and are not to be taken to the examination desk or table. If candidate has brought a bag (paper, transparent plastic or non-transparent plastic), the following items may be stored inside it under the candidate’s chair (as long as the bag is large enough): cell phone, wallet, laptop computer and any small electronic devices such as calculator. Any pencil cases found on desks will be searched.</item>
+        <item>The Observer has authority to assign seats to candidates.</item>
+        <item>Students shall not communicate with one another in any manner whatsoever during the examination. Students may not leave the examination room unescorted for any reason, and this includes using the washroom.</item>
+        <item>Candidates who bring any unauthorized materials or electronic devices into an examination room or who assist or obtain assistance from other candidates or from any unauthorized source are liable to penalties under the Code of Behaviour on Academic Matters, including the loss of academic credit and expulsion.</item>
+        <item>In general, candidates will not be permitted to enter an examination room later than fifteen minutes after the commencement of the examination, nor to leave except under supervision until at least half an hour after the examination has commenced.</item>
+        <item>Candidates shall remain seated at their desks during the final ten minutes of each examination.</item>
+        <item>At the conclusion of an examination, all writing shall cease. The Chief Presiding Officer may seize the papers of candidates who fail to observe this requirement, and a penalty may be imposed.</item>
+        <item>Examination books and other material issued for the examination shall not be removed from the examination room except by authority of the Chief Presiding Officer.</item>
+    </string-array>
+
+    <!--bachelor admission-->
+    <string name="bachelor_deadline">Deadline and Requirements</string>
+    <string name="bachelor_registration">Registration Dates:</string>
+    <string name="bachelor_registr_date">Registration starts on:  Saturday, 2 of July 2018.
+Deadline: Sunday, 17 August 2018.</string>
+    <string name="bachelor_registration_docs">List of Documents required for registration AIU</string>
+    <string name="bachelor_docs">1.    Original High School Diploma of Graduation (including high school transcript).
+2.    Original “ORT” certificate.
+3.    Copy of ID Card.
+4.    Copy of Military Registration Certificate (boys only)
+5.    ID Photos: size 3x4 – (6 pieces).
+6.    Initial Payment of 30% from total Tuition Fee.</string>
+    <string name="bachelor_office">Registration Office:</string>
+    <string name="bachelor_address">Ala-Too International University (A-Block),107 room
+Address: Ankara Street 1/8, Tunguch, 720048, Bishkek, Kyrgyz Republic
+Tel: +996 (312) 630407
+       +996 555 820 000 (WhatsApp)</string>
+    <string name="bachelor_tuition_fee">Tuition Fee:</string>
+    <string name="bachelor_kg_prep">For the citizens of  the  KG (Language Preparation School)</string>
+    <string name="bachelor_kg_courses">For the citizens of  the  KG (1,2,3,4th courses)</string>
+    <string name="bachelor_foreigners">For foreigners (Language Preparation school,1,2,3,4th courses)</string>
+    <string name="bachelor_kg_prep_money">1,700 $</string>
+    <string name="bachelor_kg_courses_money">1,800 $</string>
+    <string name="bachelor_foreigners_money">2,700 $</string>
+    <string name="bachelor_financial_aid">Financial Aid:</string>
+    <string-array name="bachelor_financial_aid_array">
+        <item>Students who took first, second, or third place in International Olympiad on particular branches (Physics (IPHO), Chemistry (ICHO), Mathematics (IMO), Biology (IBO), Informatics (IIO)) can study with 100% discount.</item>
+        <item>Students who took first place in National Olympiad during their 11th class on particular branches (Physics, Chemistry, Mathematics, Biology, Informatics, History, Geography, English language, Kyrgyz language, Russian language) can study with 100% discount, students who took second place with 50% discount, third place with 40% discount.</item>
+        <item>Students who took first place in National Olympiad during 10th class on particular branch (Physics, Chemistry, Mathematics, Biology, Informatics, History, Geography, English language, Kyrgyz language, Russian language) can study with 50% discount, second  place with 30% discount, third place with 20% discount.</item>
+        <item>Students who received between 220–240 points at National-level University Entrance Test (ОРТ) can study with 100% discount</item>
+        <item>Students who received 215–219 at National-level University Entrance Test (ОРТ) can study with 65% discount.</item>
+        <item>Students who received 210–214 at National-level University Entrance Test (ОРТ) can study with 50% discount.</item>
+        <item>Students who received 200–209 at National-level University Entrance Test (ОРТ) can study with 35% discount.</item>
+        <item>Students who received 160–199 at National-level University Entrance Test (ОРТ) can study with 10%.</item>
+        <item>Students who received 140–159 at National-level University Entrance Test (ОРТ) can study with 5% discount.</item>
+        <item>Students who successfully graduated school with Red Diploma (красный аттестат) can study with 20% discount.</item>
+        <item>Student who took first place in Regional Olympiad  (областная олимпиада) can study with 20% discount.</item>
+        <item>Students who graduated from the "SECOM" GRT preparatory courses (being student at least 4 months with official confirmation letter) (in 2017–2018 academic year) will be able to study with a 20% discount.</item>
+        <item>Students who took the right to study with 100% discount will have to pay full tuition fee in case student fails one subject during the semester. Student will regain right to continue to study with 100% discount in case there will not be fail subjects in coming semester.</item>
+        <item>Students who graduated from the lyceum "SAPAT" (9th and 11th grades) will be able to study with a 20% discount.</item>
+        <item>Students who took 1st place in the competition "Robotics" in the 11th class, organized by the IEO "Sapat", have the right to enter the department "Electronics and Nanoelectronics" with a 25% discount.</item>
+        <item>In case of two or more siblings are students of AIU in academic year, students are granted 5% discount (each student is entitled).</item>
+        <item>Students who achieved first place in individual sport games at National and International Sports Olympiads are granted with 30% discounts. Discount is entitled for the five students who come first. Certificate of achievement have to be gained during last year.</item>
+        <item>Children of citizens who passed away during public uprising on seventh April 2010 can study with 25% discount. Necessary documents should be shown.</item>
+        <item>Students whose father and mother (both of them together) have passed  away are granted with 30% discount.</item>
+        <item>Students registering in professional college on 9–11 basis are given a 20% discount.</item>
+        <item>Students who graduated from the Professional College at the "Ala–Too" International University  on the basis of 9–11 grade  are given a 20% discount.</item>
+    </string-array>
+    
+    <string name="scholarships">Scholarships:</string>
+    <string name="scholarships_money">Starting from second year in case of success, three students with top three GPA, from each department awarded scholarships in amount of:
+First Place - 2000 soms
+Second place - 1500 soms
+Third place - 1000 soms</string>
+
+    <!--master overview-->
+    <string name="master_joint">Joint Master\'s Program in Informatics</string>
+    <string name="master_joint_info">The Kyrgyz-German Faculty of Applied Informatics announces a recruitment for a joint master\'s program in cooperation with KSUSTA, IU Ala-Too and the Western Saxon University of Applied Sciences Zwickau in the following profiles:</string>
+    <string name="master_first">Designing of international software systems</string>
+    <string name="master_first_description">This profile is based on the Master\'s Program in Informatics at the Western Saxon University of Applied Sciences Zwickau, with an emphasis on software development. The content is also adapted to the needs of local enterprises that work in large software development and have a high demand for software developers at the master\'s level. During the preparation of the curricula, discussions and negotiations were held with managers in the field of development and management of numerous companies and organizations. Language training and intercultural training can successfully work in international teams. Training is provided in English, German and Russian.</string>
+    <string name="master_second">Entrepreneurship in the field of information technology</string>
+    <string name="master_second_description">The profile is business-oriented, the purpose of which is to provide students with software products with commercial exploitation and associated organizational structures, as well as the necessary managerial skills. The content of the curriculum facilitates the transfer of knowledge and technology to the economy of Kyrgyzstan and the strengthening of the existing IT industry both nationally and internationally. This profile focuses on the technical basics of software development, business components for the exploitation of inventions, intercultural aspects and language training. Practical modules of the 2nd and 3rd semesters will allow the graduates to successfully create and implement new projects within the existing enterprise. Training is provided in English, German and Russian.</string>
+    <string name="master_term">Normative term of study:</string>
+    <string name="master_term_year">Master\'s degree - 3 years.</string>
+    <string name="master_with_support">With support:</string>
+
+    <!--master courses-->
+    <string name="master_form_of_study">Form of study:</string>
+    <string name="master_evening">Evening</string>
+    <string name="master_schedule_of_classes">Schedule of classes:</string>
+    <string name="master_schedule">Monday: 18:30 - 20:30 (KGUSTA)
+Tuesday: 18:30 - 20:30 (KGUSTA)
+Wednesday: 18:30 - 20:30 (KGUSTA)
+Saturday: 09:30 - 12:30 (AIU)</string>
+
+    <!--master graduate research-->
+    <string name="master_graduate_header">Competition for the support of graduate students, applicants and PhD-doctoral students</string>
+    <string name="master_graduate_project_daad">Project DAAD "Kyrgyz-German Faculty of Applied Informatics (KGFPI)":</string>
+    <string name="master_graduate_project_daad_description">Within the framework of the DAAD project "Kyrgyz-German Faculty of Applied Informatics", implemented between 2016 and 2019, a competition is announced among teachers and young scientists of the International University Alatoo and KSUSTA for research in the Kyrgyz-German Faculty of Applied Informatics and the Western Saxon University Zwickau (WHZ).</string>
+    <string name="master_graduate_aim">Aim:</string>
+    <string name="master_graduate_aim_description">The goal is to involve scientific research in teaching and strengthening the faculty at KGPPI. Criterion for participation in the program is the relevance of the thesis topic. In addition, the defense of the candidate\'s thesis is planned no later than two years. Research and training are carried out in KGPPI. The candidate undertakes to teach and conduct research at KGPPI for at least three years.</string>
+    <string name="master_graduate_sphere_research">Spheres of research:</string>
+    <string name="master_graduate_sphere_research_description">The project supports research activities in the following areas:
+
+• Information Security
+
+• Applied computer science - mobile systems
+
+The management of the research topics is conducted by the dean of the Faculty of CGAPI, Dr. A. Abdulaev</string>
+    <string name="master_graduate_form_of_support">Form of support:</string>
+    <string name="master_graduate_form_of_support_description">• Fee for conducting research in KGPPI in the amount of 250,00 € per month. At the same time, 50% of the workload must be allocated for scientific research;
+
+• Scientific internship with a duration of up to 3 months at the University of Zwickau. Travel expenses up to 700 € are paid from the project and a monthly stipend of 1.000 € is provided. Of this amount, the same must be purchased health insurance in Germany.</string>
+    <string name="master_graduate_required_docs">Required documents (in English or German):</string>
+    <string name="master_graduate_required_docs_description">• Completed application form;
+
+• Detailed written presentation (Exposè) on the topic of dissertation work;
+
+• A letter of recommendation from the chief executive;
+
+• Summary;
+
+• Certificate certifying knowledge of German or English at level B1.</string>
+    <string name="master_graduate_selection_com">Selection Commission:</string>
+    <string name="master_graduate_selection_com_description">• Dean of the CGAPI, Dr. Abdulaev AA;
+
+• Project Manager of DAAD.</string>
+    <string name="master_graduate_app_deadline">Application deadline:</string>
+    <string name="master_graduate_app_deadline_description">• no later than August 31, 2018;
+
+• send to kgfi.project@gmail.com
+
+The results of the selection will be known on September 15, 2018.
+
+If you have any questions, please contact: kgfi.project@gmail.com</string>
+
+    <!--master admission-->
+
+    <string name="master_requirements">Requirements for admission:</string>
+    <string name="master_requirements_a">Requirements on the specialty:</string>
+    <string name="master_requirements_a_description">Bachelor\'s degree or computer scientist with 75% performance over the past two years. A bachelor\'s degree or a technical degree is also accepted with an academic achievement of 85% in subjects related to computer science over the last two years of training. These competences must be documented. Professional programming activities can be recognized as fulfilling the criterion for admission. If necessary, the student must listen to the courses on in-depth programming and software development in the Bachelor\'s degree program of KGPPI or Alatoo University. These compulsory courses are read not in the evening or on the weekends. For possible courses, a fee is charged in addition to the principal amount of the tuition fee.</string>
+    <string name="master_requirements_b">Requirements for foreign languages:</string>
+    <string name="master_requirements_b_description">▪ English B2 or
+
+▪ English B1 or German B2
+
+The level of English is determined by the teachers of the University of Alatoo.
+
+The level of German language proficiency is determined by the teachers of KGFPI KGUSTA</string>
+    <string name="master_docs">List of documents required for admission:</string>
+    <string name="master_docs_description">Documents for admission to the magistracy
+
+1. Application
+
+2. The original of the bachelor\'s degree (specialist) with the application of the extract from the record sheet
+
+3. Copy of the Diploma Supplement
+
+4. 2 pictures of 3x4
+
+5. Copy of passport (original for viewing)
+
+6. The contract
+
+7. Personal account of personnel</string>
+    <string name="master_note">Note for international students:</string>
+    <string name="master_note_description">Note to foreign citizens
+
+Translation of the passport, diploma and its insert into Kyrgyz or Russian (the translation must be confirmed by a certified notary or translation firms).</string>
+
+    <string name="master_deadline">Deadline:</string>
+    <string name="master_deadline_description">Documents for admission to the Master\'s program are accepted until September 30, 17
+        at the International University of Alatoo, at the address: Bishkek, Tunguch microdistrict, Ankara str., 1/8
+
+Telephones for information: 0312 54-92-38, 0312 63-14-25</string>
+
+    <!--academic calendar-->
+    <string name="academic_calendar_2018_2019">Academic Calendar 2018 – 2019</string>
+    <string-array name="academic_names">
+        <item>|FALL SEMESTER</item>
+        <item>Registration</item>
+        <item>Start for the lessons</item>
+        <item>Mid-term Exams</item>
+        <item>Final Exams</item>
+        <item>Deadline to enter Final marks</item>
+        <item>|HOLIDAYS</item>
+        <item>Academic Staff</item>
+        <item>Students</item>
+        <item>|SPRING SEMESTER</item>
+        <item>Registration</item>
+        <item>Start for the lessons</item>
+        <item>End for the lessons for senior students</item>
+        <item>Mid-term Exams</item>
+        <item>Deadline to enter Mid-term marks for Senior students</item>
+        <item>Final Exams</item>
+        <item>Deadline to enter Final marks</item>
+        <item>State Exams (2nd-year students)</item>
+        <item>Golden exams</item>
+        <item>State Exams (4th-year students)</item>
+        <item>Eıd al-Adha</item>
+        <item>October Revolution</item>
+        <item>Homeland Protection Day</item>
+        <item>International Women’s Day</item>
+        <item>Nooruz</item>
+        <item>Worker’s Day</item>
+        <item>Constitution Day</item>
+        <item>Victory Day</item>
+    </string-array>
+    <string-array name="academic_terms">
+        <item>August 22 - December 29, 2018</item>
+        <item>August 22 - September 07, 2018</item>
+        <item>August 27, 2018</item>
+        <item>October 29 – November 03, 2018</item>
+        <item>December 17 – 29, 2018</item>
+        <item>January 08, 2019</item>
+        <item> </item>
+        <item>December 30, 2018 – January 06, 2019</item>
+        <item>December 30, 2018 – January 13, 2019</item>
+        <item>January 14 - May 19, 2019</item>
+        <item>January 14 – February 02, 2019</item>
+        <item>January 14, 2019</item>
+        <item>March 22, 2019</item>
+        <item>March 25 – 30, 2019</item>
+        <item>April 19, 2019</item>
+        <item>Мay 06 – 18, 2019</item>
+        <item>Мay 24, 2019</item>
+        <item>Мay 20 – 25, 2019</item>
+        <item>Мay 27 – 28, 2019</item>
+        <item>Мay 29 – June 08, 2019</item>
+        <item>August 20–21, 2018</item>
+        <item>November 07, 2018</item>
+        <item>February 23, 2019</item>
+        <item>March 08, 2019</item>
+        <item>March 21, 2019</item>
+        <item>Мay 01, 2019</item>
+        <item>Мay 05, 2019</item>
+        <item>Мay 09, 2019</item>
+    </string-array>
 </resources>
