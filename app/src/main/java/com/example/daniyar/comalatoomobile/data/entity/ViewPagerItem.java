@@ -2,29 +2,33 @@ package com.example.daniyar.comalatoomobile.data.entity;
 
 import android.support.v4.app.Fragment;
 
+import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
+import com.example.daniyar.comalatoomobile.data.entity.timetable.Week;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class ViewPagerItem {
 
     private final Fragment mFragment;
-    private final TimetableModel mTimetableModel;
-    private final ArrayList<TimetableSubjectsModel> mSubjectsModels;
+    private final List<String> mTimes;
+    private final Week mWeek;
 
-    public ViewPagerItem(Fragment fragment, TimetableModel timetableModel, ArrayList<TimetableSubjectsModel> subjectsModels){
+    public ViewPagerItem(Fragment fragment, List<String> times, Week week){
         mFragment = fragment;
-        mTimetableModel = timetableModel;
-        mSubjectsModels = subjectsModels;
+        mTimes = times;
+        mWeek = week;
     }
 
     public Fragment getFragment() {
         return mFragment;
     }
 
-    public TimetableModel getTimetableModel() {
-        return mTimetableModel;
+    public List<String> getTimes() {
+        return mTimes;
     }
 
-    public ArrayList<TimetableSubjectsModel> getSubjectsModels() {
-        return mSubjectsModels;
+    public Week getWeek() {
+        return mWeek;
     }
 }

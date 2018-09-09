@@ -1,8 +1,8 @@
-package com.example.daniyar.comalatoomobile.ui.timetable.day_subjects;
+package com.example.daniyar.comalatoomobile.ui.timetable.day;
 
 import com.example.daniyar.comalatoomobile.ui.LifeCycle;
 
-public interface TimetableSubjectsContract {
+public interface TimetableDayContract {
 
     interface View{
 

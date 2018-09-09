@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ComAlaTooMobile</string>
+    <string name="lunch">LUNCH</string>
 
     <!--menu-->
     <string name="title_final">Final</string>
@@ -7,6 +8,7 @@
     <string name="title_midterm">Midterm</string>
     <string name="title_news">News</string>
     <string name="title_timetable">Timetable</string>
+    <string name="title_exam">Exams</string>
 
     <!--navigation drawer-->
     <string name="aiu">Ala-Too International University</string>

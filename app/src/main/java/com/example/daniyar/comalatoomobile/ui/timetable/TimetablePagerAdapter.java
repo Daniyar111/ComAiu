@@ -2,28 +2,32 @@ package com.example.daniyar.comalatoomobile.ui.timetable;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.daniyar.comalatoomobile.data.entity.ViewPagerItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class TimetablePagerAdapter extends FragmentStatePagerAdapter {
+public class TimetablePagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<ViewPagerItem> mViewPagerItems;
+    private List<Fragment> mFragments;
 
-    public TimetablePagerAdapter(FragmentManager fm, ArrayList<ViewPagerItem> viewPagerItems) {
+    public TimetablePagerAdapter(FragmentManager fm, List<Fragment> fragments) {
         super(fm);
-        mViewPagerItems = viewPagerItems;
+        mFragments = fragments;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return mViewPagerItems.get(position).getFragment();
+        return mFragments.get(position);
     }
 
     @Override
     public int getCount() {
-        return mViewPagerItems.size();
+        return mFragments.size();
     }
+
+
 }
