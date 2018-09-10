@@ -3,14 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_item_mid"
-        android:title="@string/title_midterm"
-        android:icon="@drawable/ic_assignment_black_24dp"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/action_item_final"
-        android:title="@string/title_final"
+        android:id="@+id/action_item_ams"
+        android:title="@string/title_ams"
         android:icon="@drawable/ic_school_black_24dp"
         app:showAsAction="ifRoom" />
 

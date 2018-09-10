@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.news.news_details.NewsDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/AppTheme"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ToolbarColoredBackArrow"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/buttonPrevious"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/button_layout"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="13sp">
+
+            <FrameLayout
+                android:id="@+id/frameLayoutPrevious"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:background="@drawable/ic_prev"/>
+
+            <TextView
+                android:id="@+id/textViewPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:text="@string/previous"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/buttonNext"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/button_layout"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="13sp">
+
+            <TextView
+                android:id="@+id/textViewNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:text="@string/next"/>
+
+            <FrameLayout
+                android:id="@+id/frameLayoutNext"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:background="@drawable/ic_next"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/include_news_details"/>
+
+</LinearLayout>

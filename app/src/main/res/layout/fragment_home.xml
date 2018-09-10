@@ -1,28 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <ViewFlipper
-        android:id="@+id/imageFlipper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:src="@drawable/slide1"
+        <ViewFlipper
+            android:id="@+id/imageFlipper"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/slide1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+            <ImageView
+                android:src="@drawable/slide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+            <ImageView
+                android:src="@drawable/slide3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+        </ViewFlipper>
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"/>
-        <ImageView
-            android:src="@drawable/slide2"
-            android:layout_width="wrap_content"
+            android:textSize="23sp"
+            android:layout_marginTop="10sp"
+            android:text="@string/what_is_cs"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"/>
-        <ImageView
-            android:src="@drawable/slide3"
-            android:layout_width="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/cs_short_description"/>
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"/>
-    </ViewFlipper>
-</LinearLayout>
+            android:textSize="21sp"
+            android:layout_marginTop="10sp"
+            android:text="@string/our_vision"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/vision_first"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/vision_second"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_marginTop="10sp"
+            android:text="@string/our_mission"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/mission_first"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/mission_second"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/mission_third"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/mission_forth"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_marginTop="10sp"
+            android:text="@string/our_merits_and_principles"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/merits_first"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/merits_second"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/merits_third"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_margin="5sp"
+            android:text="@string/merits_forth"/>
+    </LinearLayout>
+</ScrollView>

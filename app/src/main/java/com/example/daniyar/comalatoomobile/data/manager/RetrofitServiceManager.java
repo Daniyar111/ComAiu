@@ -8,7 +8,7 @@ import com.example.daniyar.comalatoomobile.data.network.RetrofitService;
 
 import retrofit2.Call;
 
-public class RetrofitServiceManager {
+public final class RetrofitServiceManager {
 
     private Context mContext;
     private RetrofitService mService;
