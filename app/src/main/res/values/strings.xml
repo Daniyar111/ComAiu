@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">ComAlaTooMobile</string>
     <string name="lunch">LUNCH</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
     <!--menu-->
+    <string name="title_ams">AMS</string>
     <string name="title_final">Final</string>
     <string name="title_home">Home</string>
     <string name="title_midterm">Midterm</string>
@@ -343,7 +346,7 @@ Tel: +996 (312) 630407
         <item>Students registering in professional college on 9–11 basis are given a 20% discount.</item>
         <item>Students who graduated from the Professional College at the "Ala–Too" International University  on the basis of 9–11 grade  are given a 20% discount.</item>
     </string-array>
-    
+
     <string name="scholarships">Scholarships:</string>
     <string name="scholarships_money">Starting from second year in case of success, three students with top three GPA, from each department awarded scholarships in amount of:
 First Place - 2000 soms

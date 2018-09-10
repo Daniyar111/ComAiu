@@ -72,13 +72,9 @@ public class MainActivity extends BaseActivity implements MainContract.View{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        int id = item.getItemId();
-        switch (id){
-            case R.id.action_item_mid:
-                Toast.makeText(this, "midterm", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.action_item_final:
-                Toast.makeText(this, "final", Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()){
+            case R.id.action_item_ams:
+                Toast.makeText(this, "AMS", Toast.LENGTH_SHORT).show();
                 return true;
         }
         return super.onOptionsItemSelected(item);
