@@ -1,13 +1,13 @@
 
 package com.example.daniyar.comalatoomobile.data.entity.timetable;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class OneA implements Parcelable {
+import io.realm.RealmObject;
+
+public class OneA extends RealmObject {
 
     @SerializedName("name")
     @Expose
@@ -39,33 +39,4 @@ public class OneA implements Parcelable {
                 ", other='" + other + '\'' +
                 '}';
     }
-
-    protected OneA(Parcel in) {
-        name = in.readString();
-        other = in.readString();
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeString(other);
-    }
-
-    @SuppressWarnings("unused")
-    public static final Parcelable.Creator<OneA> CREATOR = new Parcelable.Creator<OneA>() {
-        @Override
-        public OneA createFromParcel(Parcel in) {
-            return new OneA(in);
-        }
-
-        @Override
-        public OneA[] newArray(int size) {
-            return new OneA[size];
-        }
-    };
 }

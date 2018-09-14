@@ -20,7 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.news.news_details.NewsDetailsActivity"></activity>
+        <activity android:name=".ui.news.news_details.NewsDetailsActivity" />
+        <activity android:name=".ui.bachelor.BachelorActivity" />
+        <activity android:name=".ui.master.MasterActivity" />
+        <activity android:name=".ui.academ_calendar.AcademicCalendarActivity"></activity>
     </application>
 
 </manifest>

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.daniyar.comalatoomobile.R;
 import com.example.daniyar.comalatoomobile.data.entity.timetable.Week;
 import com.example.daniyar.comalatoomobile.ui.BaseFragment;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +38,12 @@ public class TimetableDayFragment extends BaseFragment implements TimetableDayCo
         TimetableDayFragment fragment = new TimetableDayFragment();
         Bundle bundle = new Bundle();
         bundle.putString("day", day);
+        Gson gsonTime = new Gson();
+        String jsonTime = gsonTime.toJson(times);
         bundle.putStringArrayList("times", (ArrayList<String>) times);
-        bundle.putParcelable("week", week);
+        Gson gson = new Gson();
+        String json = gson.toJson(week);
+        bundle.putString("week", json);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -76,12 +81,17 @@ public class TimetableDayFragment extends BaseFragment implements TimetableDayCo
 
     private void updateData(){
         if(getArguments() != null){
+//            Gson gson = new Gson();
+//            String json = mSharedPreferences.getString("timetable", "");
+//            TimetableModel timetableModel = gson.fromJson(json, TimetableModel.class);
+//            if(timetableModel != null){
+//                Log.d("SHAREDDANI", "onOptionsItemSelected: " + timetableModel.toString());
+//            }
             mDay = getArguments().getString("day");
             mWeek = getArguments().getParcelable("week");
             mTimes = getArguments().getStringArrayList("times");
 
             mTextViewDay.setText(mDay);
-            Log.d("DANITEXT", "onViewCreated: " + mWeek.toString());
 
             if(mWeek.getOneAS() != null){
                 setTextData(mTextViewOneA, "1a");
