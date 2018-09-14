@@ -1,21 +1,30 @@
 package com.example.daniyar.comalatoomobile.ui.main;
 
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.daniyar.comalatoomobile.ComApplication;
 import com.example.daniyar.comalatoomobile.R;
+import com.example.daniyar.comalatoomobile.data.db.SQLiteHelper;
+import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
+import com.example.daniyar.comalatoomobile.data.widget.BottomNavigationViewHelper;
 import com.example.daniyar.comalatoomobile.ui.BaseActivity;
 import com.example.daniyar.comalatoomobile.ui.home.HomeFragment;
 import com.example.daniyar.comalatoomobile.ui.news.NewsFragment;
 import com.example.daniyar.comalatoomobile.ui.timetable.TimetableFragment;
+import com.google.gson.Gson;
 
 public class MainActivity extends BaseActivity implements MainContract.View{
 
     private MainPresenter mPresenter;
+    private SQLiteHelper mSQLiteHelper;
+    private SharedPreferences mSharedPreferences;
 
     @Override
     protected int getViewLayout() {
@@ -34,12 +43,15 @@ public class MainActivity extends BaseActivity implements MainContract.View{
 
         mPresenter = new MainPresenter();
         mPresenter.bind(this);
+        mSQLiteHelper = ComApplication.get(this).getSQLiteHelper();
+        mSharedPreferences = getPreferences(MODE_PRIVATE);
 
         getToolbar("", false);
         getDrawer();
         switchFragment(new HomeFragment());
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        BottomNavigationViewHelper.removeShiftMode(navigation);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -75,6 +87,7 @@ public class MainActivity extends BaseActivity implements MainContract.View{
         switch (item.getItemId()){
             case R.id.action_item_ams:
                 Toast.makeText(this, "AMS", Toast.LENGTH_SHORT).show();
+
                 return true;
         }
         return super.onOptionsItemSelected(item);

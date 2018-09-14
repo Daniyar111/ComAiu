@@ -1,12 +1,25 @@
 package com.example.daniyar.comalatoomobile.ui;
 
+import android.content.Intent;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.daniyar.comalatoomobile.R;
-import com.example.daniyar.comalatoomobile.data.entity.ViewPagerItem;
+import com.example.daniyar.comalatoomobile.data.entity.TabPagerItem;
+import com.example.daniyar.comalatoomobile.ui.academ_calendar.AcademicCalendarActivity;
+import com.example.daniyar.comalatoomobile.ui.bachelor.BachelorActivity;
+import com.example.daniyar.comalatoomobile.ui.bachelor.admission.BachelorAdmissionFragment;
+import com.example.daniyar.comalatoomobile.ui.bachelor.courses.BachelorCoursesFragment;
+import com.example.daniyar.comalatoomobile.ui.bachelor.exam_rules.BachelorExamRulesFragment;
+import com.example.daniyar.comalatoomobile.ui.master.MasterActivity;
+import com.example.daniyar.comalatoomobile.ui.master.admission.MasterAdmissionFragment;
+import com.example.daniyar.comalatoomobile.ui.master.courses.MasterCoursesFragment;
+import com.example.daniyar.comalatoomobile.ui.master.graduate_research.MasterGraduateFragment;
+import com.example.daniyar.comalatoomobile.ui.master.overview.MasterOverviewFragment;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -112,13 +125,16 @@ public abstract class BaseActivity extends AppCompatActivity implements Drawer.O
 
         switch ((int) drawerItem.getIdentifier()){
             case 1:
-
+                startActivity(new Intent(this, BachelorActivity.class));
+                mDrawer.setSelection(-1);
                 break;
             case 2:
-
+                startActivity(new Intent(this, MasterActivity.class));
+                mDrawer.setSelection(-1);
                 break;
             case 3:
-
+                startActivity(new Intent(this, AcademicCalendarActivity.class));
+                mDrawer.setSelection(-1);
                 break;
             case 4:
 
@@ -136,8 +152,26 @@ public abstract class BaseActivity extends AppCompatActivity implements Drawer.O
         return false;
     }
 
-    protected void getTabLayout(){
-        ArrayList<ViewPagerItem> viewPagerItems = new ArrayList<>();
+    protected void getTabLayout(String type){
+        ArrayList<TabPagerItem> tabPagerItems = new ArrayList<>();
+        if(type.equals("bachelor")){
+            tabPagerItems.add(new TabPagerItem(new BachelorCoursesFragment(), getResources().getString(R.string.courses)));
+            tabPagerItems.add(new TabPagerItem(new BachelorExamRulesFragment(), getResources().getString(R.string.exam_rules)));
+            tabPagerItems.add(new TabPagerItem(new BachelorAdmissionFragment(), getResources().getString(R.string.admission)));
+        }
+        else if(type.equals("master")){
+            tabPagerItems.add(new TabPagerItem(new MasterOverviewFragment(), getResources().getString(R.string.overview)));
+            tabPagerItems.add(new TabPagerItem(new MasterCoursesFragment(), getResources().getString(R.string.course)));
+            tabPagerItems.add(new TabPagerItem(new MasterGraduateFragment(), getResources().getString(R.string.graduate_research)));
+            tabPagerItems.add(new TabPagerItem(new MasterAdmissionFragment(), getResources().getString(R.string.admission)));
+        }
+
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+
+        FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager(), tabPagerItems);
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
 
     }
 

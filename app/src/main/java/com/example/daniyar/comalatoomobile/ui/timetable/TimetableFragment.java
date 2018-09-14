@@ -9,14 +9,18 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 
+import com.example.daniyar.comalatoomobile.ComApplication;
 import com.example.daniyar.comalatoomobile.R;
 import com.example.daniyar.comalatoomobile.data.entity.ViewPagerItem;
 import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
 import com.example.daniyar.comalatoomobile.data.manager.RetrofitServiceManager;
+import com.example.daniyar.comalatoomobile.data.manager.SystemServiceManager;
 import com.example.daniyar.comalatoomobile.ui.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.realm.Realm;
 
 public class TimetableFragment extends BaseFragment implements TimetableContract.View{
 
@@ -33,10 +37,11 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mPresenter = new TimetablePresenter(new RetrofitServiceManager(getContext()));
+        mPresenter = new TimetablePresenter(new RetrofitServiceManager(getContext()), ComApplication.get(getContext()).getSQLiteHelper(), getActivity().getPreferences(Context.MODE_PRIVATE), new SystemServiceManager(getContext()), Realm.getDefaultInstance());
         mPresenter.bind(this);
         initializeViews(view);
-        mPresenter.getTimetable();
+        mPresenter.getTimetableData();
+
     }
 
     private void initializeViews(View view){
@@ -47,6 +52,7 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     public void onSuccess(List<Fragment> fragments) {
 
         if(getActivity() != null){
+
             mAdapter = new TimetablePagerAdapter(getActivity().getSupportFragmentManager(), fragments);
             mViewPager.setAdapter(mAdapter);
         }

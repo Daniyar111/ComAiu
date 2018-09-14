@@ -22,5 +22,11 @@ public interface TimetableContract {
     interface Presenter extends LifeCycle<View>{
 
         void getTimetable();
+
+        void getSavedTimetable();
+
+        void getTimetableData();
+
+        void writeToRealm();
     }
 }
