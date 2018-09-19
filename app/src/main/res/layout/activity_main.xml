@@ -11,14 +11,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/toolbar_com"
         android:theme="@style/ToolbarColoredBackArrow">
-        
-        <ImageView
-            android:src="@drawable/logo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="7sp"/>
     </android.support.v7.widget.Toolbar>
 
     <FrameLayout

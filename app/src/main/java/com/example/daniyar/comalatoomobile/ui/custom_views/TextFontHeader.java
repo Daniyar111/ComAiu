@@ -24,7 +24,7 @@ public class TextFontHeader extends AppCompatTextView{
 
     private void init(){
         if(!isInEditMode()){
-            Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/FFF-Tusj.ttf");
+            Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/FFF_Tusj.ttf");
             setTypeface(typeface);
         }
     }

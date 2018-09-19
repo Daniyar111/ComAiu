@@ -11,10 +11,10 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         app:titleTextColor="@android:color/white"
         app:popupTheme="@style/AppTheme"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/toolbar"
         android:theme="@style/ToolbarColoredBackArrow"/>
 
     <LinearLayout
@@ -26,11 +26,11 @@
         <LinearLayout
             android:id="@+id/buttonPrevious"
             android:layout_width="0sp"
-            android:layout_height="wrap_content"
+            android:layout_height="50sp"
             android:orientation="horizontal"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/button_layout"
+            android:background="@drawable/button_layout_left"
             android:clickable="true"
             android:focusable="true"
             android:padding="13sp">
@@ -52,11 +52,11 @@
         <LinearLayout
             android:id="@+id/buttonNext"
             android:layout_width="0sp"
-            android:layout_height="wrap_content"
+            android:layout_height="50sp"
             android:orientation="horizontal"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/button_layout"
+            android:background="@drawable/button_layout_right"
             android:clickable="true"
             android:focusable="true"
             android:padding="13sp">

@@ -7,18 +7,17 @@
     tools:context=".ui.bachelor.BachelorActivity"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:titleTextColor="@android:color/white"
-        app:popupTheme="@style/AppTheme"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ToolbarColoredBackArrow"/>
-
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="100sp"
+        android:background="@drawable/toolbar">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/AppTheme"
+            android:theme="@style/ToolbarColoredBackArrow"/>
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"

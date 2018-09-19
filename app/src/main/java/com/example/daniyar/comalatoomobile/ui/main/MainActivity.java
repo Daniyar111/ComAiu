@@ -15,16 +15,22 @@ import com.example.daniyar.comalatoomobile.data.db.SQLiteHelper;
 import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
 import com.example.daniyar.comalatoomobile.data.widget.BottomNavigationViewHelper;
 import com.example.daniyar.comalatoomobile.ui.BaseActivity;
+import com.example.daniyar.comalatoomobile.ui.exams.ExamsFragment;
 import com.example.daniyar.comalatoomobile.ui.home.HomeFragment;
 import com.example.daniyar.comalatoomobile.ui.news.NewsFragment;
 import com.example.daniyar.comalatoomobile.ui.timetable.TimetableFragment;
 import com.google.gson.Gson;
+
+import java.sql.Time;
+
+import io.realm.Realm;
 
 public class MainActivity extends BaseActivity implements MainContract.View{
 
     private MainPresenter mPresenter;
     private SQLiteHelper mSQLiteHelper;
     private SharedPreferences mSharedPreferences;
+    private Realm mRealm;
 
     @Override
     protected int getViewLayout() {
@@ -45,6 +51,7 @@ public class MainActivity extends BaseActivity implements MainContract.View{
         mPresenter.bind(this);
         mSQLiteHelper = ComApplication.get(this).getSQLiteHelper();
         mSharedPreferences = getPreferences(MODE_PRIVATE);
+        mRealm = Realm.getDefaultInstance();
 
         getToolbar("", false);
         getDrawer();
@@ -68,6 +75,7 @@ public class MainActivity extends BaseActivity implements MainContract.View{
                     switchFragment(new TimetableFragment());
                     return true;
                 case R.id.navigation_exam:
+                    switchFragment(new ExamsFragment());
                     return true;
             }
             return false;

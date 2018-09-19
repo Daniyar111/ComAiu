@@ -14,14 +14,17 @@ import com.example.daniyar.comalatoomobile.data.entity.timetable.Week;
 
 import java.util.ArrayList;
 
+import io.realm.Realm;
+import io.realm.RealmList;
+
 public class TimetableDayAdapter extends RecyclerView.Adapter<TimetableDayAdapter.ViewHolder> {
 
     private Context mContext;
-    private ArrayList<String> mTimes;
+    private RealmList<String> mTimes;
     private Week mWeek;
     private String mGrade;
 
-    TimetableDayAdapter(Context context, ArrayList<String> times, Week week, String grade){
+    TimetableDayAdapter(Context context, RealmList<String> times, Week week, String grade){
         mContext = context;
         mTimes = times;
         mWeek = week;
@@ -81,8 +84,20 @@ public class TimetableDayAdapter extends RecyclerView.Adapter<TimetableDayAdapte
         else{
             holder.mTextViewTime.setText(time);
         }
-        holder.mTextViewSubject.setText(subject);
-        holder.mTextViewTeacher.setText(teacher);
+        filterText(holder.mTextViewSubject, subject);
+        filterText(holder.mTextViewTeacher, teacher);
+    }
+
+    private void filterText(TextView textView, String text){
+        if(text.contains("&amp;")){
+            textView.setText(text.replace("&amp;", "&"));
+        }
+        else if(text.contains("&#39;")){
+            textView.setText(text.replace("&#39;", "'"));
+        }
+        else{
+            textView.setText(text);
+        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{

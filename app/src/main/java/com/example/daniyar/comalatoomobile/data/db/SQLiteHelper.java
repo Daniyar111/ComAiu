@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.daniyar.comalatoomobile.data.entity.GradesModel;
 import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
 
 import java.util.ArrayList;
@@ -15,25 +16,16 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "COM";
     private static final int DB_VERSION = 2;
 
-    private static final String TABLE_TIMETABLE = "TABLE_TIMETABLE";
-    private static final String TABLE_TIMES = "TABLE_TIMES";
+    private static final String TABLE_GRADES = "TABLE_GRADES";
 
     private static final String ID = "_id";
 
-    private static final String NAME = "NAME";
-    private static final String OTHER = "OTHER";
-    private static final String TIME = "TIME";
+    private static final String GRADE = "GRADE";
 
-    public static final String CREATE_TABLE_TIMETABLE = "CREATE TABLE IF NOT EXISTS " +
-            TABLE_TIMETABLE + "(" +
+    public static final String CREATE_TABLE_GRADES = "CREATE TABLE IF NOT EXISTS " +
+            TABLE_GRADES + "(" +
             ID + " INTEGER_PRIMARY_KEY, " +
-            NAME + " TEXT, " +
-            OTHER + " TEXT);";
-
-    public static final String CREATE_TABLE_TIMES = "CREATE TABLE IF NOT EXISTS " +
-            TABLE_TIMES + "(" +
-            ID + " INTEGER_PRIMARY_KEY, " +
-            TIME + " TEXT);";
+            GRADE + " TEXT);";
 
     public SQLiteHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -41,46 +33,42 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(CREATE_TABLE_TIMETABLE);
-        sqLiteDatabase.execSQL(CREATE_TABLE_TIMES);
+        sqLiteDatabase.execSQL(CREATE_TABLE_GRADES);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_TIMETABLE);
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_TIMES);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CREATE_TABLE_GRADES);
         onCreate(sqLiteDatabase);
     }
 
-    public void saveTimetable(TimetableModel timetableModel){
+    public void saveRadioButtons(GradesModel gradesModel){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        db.delete(TABLE_TIMETABLE, null, null);
-        db.delete(TABLE_TIMES, null, null);
-        for (int i = 0; i < timetableModel.getTimes().size(); i++) {
-            cv.put(TIME, timetableModel.getTimes().get(i));
-            db.insert(TABLE_TIMES, null, cv);
-        }
-        for (int i = 0; i < timetableModel.getWeeks().size(); i++) {
 
-        }
+        db.delete(TABLE_GRADES, null, null);
+
+        cv.put(GRADE, gradesModel.getGrade());
+
+        db.insert(TABLE_GRADES, null, cv);
         db.close();
     }
 
-    public ArrayList<String> getTimetable(){
+    public GradesModel getRadioButtons(){
         SQLiteDatabase db = this.getWritableDatabase();
-        ArrayList<String> times = new ArrayList<>();
-        Cursor cursor = db.query(TABLE_TIMES, null, null, null, null, null, null);
+        GradesModel gradesModel = new GradesModel();
+        Cursor cursor = db.query(TABLE_GRADES, null, null, null, null, null, null);
+
         if(cursor.moveToFirst()){
-            int timeIndex = cursor.getColumnIndex(TIME);
-            do {
-                String time = cursor.getString(timeIndex);
-                times.add(time);
+            int gradeIndex = cursor.getColumnIndex(GRADE);
+            do{
+                String grade = cursor.getString(gradeIndex);
+                gradesModel.setGrade(grade);
             } while (cursor.moveToNext());
         }
         cursor.close();
         db.close();
 
-        return times;
+        return gradesModel;
     }
 }
