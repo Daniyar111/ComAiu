@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.daniyar.comalatoomobile.R;
 import com.example.daniyar.comalatoomobile.data.entity.TabPagerItem;
@@ -56,15 +57,9 @@ public abstract class BaseActivity extends AppCompatActivity implements Drawer.O
 
     protected void getDrawer(){
 
-        ProfileDrawerItem profileDrawerItem = new ProfileDrawerItem()
-                .withName(R.string.computer_science_dep)
-                .withEmail(R.string.aiu)
-                .withIcon(R.drawable.cs_logo);
-
         AccountHeader header = new AccountHeaderBuilder()
                 .withActivity(this)
-                .withHeaderBackground(R.color.primary)
-                .addProfiles(profileDrawerItem)
+                .withHeaderBackground(R.drawable.header_logo)
                 .withSelectionListEnabledForSingleProfile(false)
                 .build();
 
@@ -137,16 +132,19 @@ public abstract class BaseActivity extends AppCompatActivity implements Drawer.O
                 mDrawer.setSelection(-1);
                 break;
             case 4:
-
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.this_function), Toast.LENGTH_LONG).show();
+                mDrawer.setSelection(-1);
                 break;
             case 5:
-
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.this_function), Toast.LENGTH_LONG).show();
+                mDrawer.setSelection(-1);
                 break;
             case 6:
-
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.this_function), Toast.LENGTH_LONG).show();
+                mDrawer.setSelection(-1);
                 break;
             case 7:
-
+                finish();
                 break;
         }
         return false;

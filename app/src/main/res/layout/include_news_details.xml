@@ -20,25 +20,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <TextView
+                <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontHeader
                     android:id="@+id/textViewName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textSize="23sp" />
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:layout_margin="7sp"/>
 
                 <TextView
                     android:id="@+id/textViewDate"
+                    android:textSize="12sp"
+                    android:gravity="end"
+                    android:textColor="@color/colorGrey"
+                    android:layout_marginTop="4sp"
+                    android:layout_marginRight="4sp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4sp" />
 
                 <ImageView
                     android:id="@+id/imageViewNews"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"/>
 
-                <TextView
+                <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontNormal
                     android:id="@+id/textViewDescription"
+                    android:layout_marginTop="26sp"
+                    android:layout_marginLeft="7sp"
+                    android:layout_marginRight="7sp"
+                    android:textColor="@android:color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.daniyar.comalatoomobile.ui.academ_calendar;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,17 +12,21 @@ import android.widget.TextView;
 import com.example.daniyar.comalatoomobile.R;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class AcademicCalendarAdapter extends RecyclerView.Adapter<AcademicCalendarAdapter.ViewHolder>{
 
     private Context mContext;
     private ArrayList<String> mNames;
     private ArrayList<String> mTerms;
+    private Set<Integer> mSet;
 
     public AcademicCalendarAdapter(Context context, ArrayList<String> names, ArrayList<String> terms){
         mContext = context;
         mNames = names;
         mTerms = terms;
+        mSet = new HashSet<>();
     }
 
     @NonNull
@@ -35,8 +40,17 @@ public class AcademicCalendarAdapter extends RecyclerView.Adapter<AcademicCalend
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.mTextViewName.setText(mNames.get(position));
-        holder.mTextViewTerm.setText(mTerms.get(position));
+        // small bug
+        if(mNames.get(position).contains("|")){
+            holder.mTextViewName.setText(mNames.get(position).replace("|", ""));
+            holder.mTextViewName.setTypeface(null, Typeface.BOLD_ITALIC);
+            holder.mTextViewTerm.setText(mTerms.get(position));
+            holder.mTextViewTerm.setTypeface(null, Typeface.BOLD_ITALIC);
+        }
+        else {
+            holder.mTextViewName.setText(mNames.get(position));
+            holder.mTextViewTerm.setText(mTerms.get(position));
+        }
     }
 
     @Override

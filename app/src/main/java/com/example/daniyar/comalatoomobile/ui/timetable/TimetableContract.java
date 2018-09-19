@@ -27,6 +27,8 @@ public interface TimetableContract {
 
         void getTimetableData();
 
+        int getCurrentDay();
+
         void writeToRealm();
     }
 }

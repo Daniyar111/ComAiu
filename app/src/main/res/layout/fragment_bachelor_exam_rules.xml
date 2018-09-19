@@ -5,11 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:textSize="20sp"
+    <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontHeader
+        android:textSize="26sp"
+        android:gravity="center"
+        android:layout_margin="10sp"
         android:text="@string/bp_exam_rules"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewExam"

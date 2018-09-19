@@ -10,17 +10,20 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         app:titleTextColor="@android:color/white"
         app:popupTheme="@style/AppTheme"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/toolbar"
         android:theme="@style/ToolbarColoredBackArrow"/>
 
-    <TextView
+    <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontHeader
         android:id="@+id/textViewName"
-        android:textSize="24sp"
+        android:textSize="26sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_margin="10sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewCalendar"

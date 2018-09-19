@@ -9,11 +9,16 @@
         android:id="@+id/textViewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:layout_margin="5sp"
+        android:textColor="@color/colorLightBlack"/>
     <TextView
         android:id="@+id/textViewTerm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"/>
+        android:gravity="end"
+        android:textSize="15sp"
+        android:layout_margin="3sp"
+        android:textColor="@color/colorLightBlack"/>
 
 </LinearLayout>

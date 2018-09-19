@@ -18,22 +18,33 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"/>
             <ImageView
+                android:src="@drawable/slide3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+            <ImageView
                 android:src="@drawable/slide2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"/>
             <ImageView
-                android:src="@drawable/slide3"
+                android:src="@drawable/slide4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+            <ImageView
+                android:src="@drawable/slide5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"/>
         </ViewFlipper>
 
-        <TextView
+        <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontImportant
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="23sp"
-            android:layout_marginTop="10sp"
+            android:textSize="28sp"
+            android:textColor="@color/colorPrimarySuperDark"
+            android:layout_marginTop="20sp"
             android:text="@string/what_is_cs"
             android:gravity="center" />
 
@@ -41,14 +52,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="8sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/cs_short_description"/>
 
-        <TextView
+        <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontImportant
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="21sp"
+            android:textSize="26sp"
             android:layout_marginTop="10sp"
+            android:textColor="@color/colorPrimarySuperDark"
             android:text="@string/our_vision"
             android:gravity="center" />
 
@@ -56,56 +69,64 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/vision_first"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/vision_second"/>
 
-        <TextView
+        <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontImportant
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="21sp"
+            android:textSize="26sp"
             android:layout_marginTop="10sp"
             android:text="@string/our_mission"
+            android:textColor="@color/colorPrimarySuperDark"
             android:gravity="center" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/mission_first"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/mission_second"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/mission_third"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/mission_forth"/>
 
-        <TextView
+        <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontImportant
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="21sp"
+            android:textColor="@color/colorPrimarySuperDark"
+            android:textSize="26sp"
             android:layout_marginTop="10sp"
             android:text="@string/our_merits_and_principles"
             android:gravity="center" />
@@ -114,28 +135,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/merits_first"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/merits_second"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/merits_third"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:layout_margin="5sp"
+            android:layout_margin="12sp"
+            android:textColor="@color/colorGrey"
             android:text="@string/merits_forth"/>
     </LinearLayout>
 </ScrollView>

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">ComAlaTooMobile</string>
     <string name="admission">Admission</string>
+    <string name="cancel">Cancel</string>
+    <string name="change">Change course</string>
     <string name="course">Course</string>
     <string name="courses">Courses</string>
     <string name="exam_rules">Exam rules</string>
@@ -10,7 +12,18 @@
     <string name="next">Next</string>
     <string name="overview">Overview</string>
     <string name="previous">Previous</string>
+    <string name="select">Select</string>
     <string name="show_desc">Show description</string>
+    <string name="swipe">Swipe left or right twice if data is not shown</string>
+    <string name="update">Update</string>
+    <string name="this_function">This function is under development</string>
+
+    <string name="first_a">1st - A</string>
+    <string name="first_b">1st - B</string>
+    <string name="second_a">2nd - A</string>
+    <string name="second_b">2nd - B</string>
+    <string name="third">3rd</string>
+    <string name="forth">4th</string>
 
     <!--menu-->
     <string name="title_ams">AMS</string>
@@ -309,20 +322,11 @@ This concludes our seminar Thank Maxat Musaeva, for your time and come.</item>
     <!--bachelor admission-->
     <string name="bachelor_deadline">Deadline and Requirements</string>
     <string name="bachelor_registration">Registration Dates:</string>
-    <string name="bachelor_registr_date">Registration starts on:  Saturday, 2 of July 2018.
-Deadline: Sunday, 17 August 2018.</string>
+    <string name="bachelor_registr_date">Registration starts on:  Saturday, 2 of July 2018.\nDeadline: Sunday, 17 August 2018.</string>
     <string name="bachelor_registration_docs">List of Documents required for registration AIU</string>
-    <string name="bachelor_docs">1.    Original High School Diploma of Graduation (including high school transcript).
-2.    Original “ORT” certificate.
-3.    Copy of ID Card.
-4.    Copy of Military Registration Certificate (boys only)
-5.    ID Photos: size 3x4 – (6 pieces).
-6.    Initial Payment of 30% from total Tuition Fee.</string>
+    <string name="bachelor_docs">1.    Original High School Diploma of Graduation (including high school transcript).\n2.    Original “ORT” certificate.\n3.    Copy of ID Card.\n4.    Copy of Military Registration Certificate (boys only)\n5.    ID Photos: size 3x4 – (6 pieces).\n6.    Initial Payment of 30% from total Tuition Fee.</string>
     <string name="bachelor_office">Registration Office:</string>
-    <string name="bachelor_address">Ala-Too International University (A-Block),107 room
-Address: Ankara Street 1/8, Tunguch, 720048, Bishkek, Kyrgyz Republic
-Tel: +996 (312) 630407
-       +996 555 820 000 (WhatsApp)</string>
+    <string name="bachelor_address">Ala-Too International University (A-Block),107 room \nAddress: Ankara Street 1/8, Tunguch, 720048, Bishkek, Kyrgyz Republic \nTel: +996 (312) 630407 \n+996 555 820 000 (WhatsApp)</string>
     <string name="bachelor_tuition_fee">Tuition Fee:</string>
     <string name="bachelor_kg_prep">For the citizens of  the  KG (Language Preparation School)</string>
     <string name="bachelor_kg_courses">For the citizens of  the  KG (1,2,3,4th courses)</string>
@@ -331,34 +335,32 @@ Tel: +996 (312) 630407
     <string name="bachelor_kg_courses_money">1,800 $</string>
     <string name="bachelor_foreigners_money">2,700 $</string>
     <string name="bachelor_financial_aid">Financial Aid:</string>
-    <string-array name="bachelor_financial_aid_array">
-        <item>Students who took first, second, or third place in International Olympiad on particular branches (Physics (IPHO), Chemistry (ICHO), Mathematics (IMO), Biology (IBO), Informatics (IIO)) can study with 100% discount.</item>
-        <item>Students who took first place in National Olympiad during their 11th class on particular branches (Physics, Chemistry, Mathematics, Biology, Informatics, History, Geography, English language, Kyrgyz language, Russian language) can study with 100% discount, students who took second place with 50% discount, third place with 40% discount.</item>
-        <item>Students who took first place in National Olympiad during 10th class on particular branch (Physics, Chemistry, Mathematics, Biology, Informatics, History, Geography, English language, Kyrgyz language, Russian language) can study with 50% discount, second  place with 30% discount, third place with 20% discount.</item>
-        <item>Students who received between 220–240 points at National-level University Entrance Test (ОРТ) can study with 100% discount</item>
-        <item>Students who received 215–219 at National-level University Entrance Test (ОРТ) can study with 65% discount.</item>
-        <item>Students who received 210–214 at National-level University Entrance Test (ОРТ) can study with 50% discount.</item>
-        <item>Students who received 200–209 at National-level University Entrance Test (ОРТ) can study with 35% discount.</item>
-        <item>Students who received 160–199 at National-level University Entrance Test (ОРТ) can study with 10%.</item>
-        <item>Students who received 140–159 at National-level University Entrance Test (ОРТ) can study with 5% discount.</item>
-        <item>Students who successfully graduated school with Red Diploma (красный аттестат) can study with 20% discount.</item>
-        <item>Student who took first place in Regional Olympiad  (областная олимпиада) can study with 20% discount.</item>
-        <item>Students who graduated from the "SECOM" GRT preparatory courses (being student at least 4 months with official confirmation letter) (in 2017–2018 academic year) will be able to study with a 20% discount.</item>
-        <item>Students who took the right to study with 100% discount will have to pay full tuition fee in case student fails one subject during the semester. Student will regain right to continue to study with 100% discount in case there will not be fail subjects in coming semester.</item>
-        <item>Students who graduated from the lyceum "SAPAT" (9th and 11th grades) will be able to study with a 20% discount.</item>
-        <item>Students who took 1st place in the competition "Robotics" in the 11th class, organized by the IEO "Sapat", have the right to enter the department "Electronics and Nanoelectronics" with a 25% discount.</item>
-        <item>In case of two or more siblings are students of AIU in academic year, students are granted 5% discount (each student is entitled).</item>
-        <item>Students who achieved first place in individual sport games at National and International Sports Olympiads are granted with 30% discounts. Discount is entitled for the five students who come first. Certificate of achievement have to be gained during last year.</item>
-        <item>Children of citizens who passed away during public uprising on seventh April 2010 can study with 25% discount. Necessary documents should be shown.</item>
-        <item>Students whose father and mother (both of them together) have passed  away are granted with 30% discount.</item>
-        <item>Students registering in professional college on 9–11 basis are given a 20% discount.</item>
-        <item>Students who graduated from the Professional College at the "Ala–Too" International University  on the basis of 9–11 grade  are given a 20% discount.</item>
-    </string-array>
+    <string name="bachelor_financial_aid_description">Students who took first, second, or third place in International Olympiad on particular branches (Physics (IPHO), Chemistry (ICHO), Mathematics (IMO), Biology (IBO), Informatics (IIO)) can study with 100% discount.\n
+Students who took first place in National Olympiad during their 11th class on particular branches (Physics, Chemistry, Mathematics, Biology, Informatics, History, Geography, English language, Kyrgyz language, Russian language) can study with 100% discount, students who took second place with 50% discount, third place with 40% discount.\n
+Students who took first place in National Olympiad during 10th class on particular branch (Physics, Chemistry, Mathematics, Biology, Informatics, History, Geography, English language, Kyrgyz language, Russian language) can study with 50% discount, second  place with 30% discount, third place with 20% discount.\n
+Students who received between 220–240 points at National-level University Entrance Test (ОРТ) can study with 100% discount\n
+Students who received 215–219 at National-level University Entrance Test (ОРТ) can study with 65% discount.\n
+Students who received 210–214 at National-level University Entrance Test (ОРТ) can study with 50% discount.\n
+Students who received 200–209 at National-level University Entrance Test (ОРТ) can study with 35% discount.\n
+Students who received 160–199 at National-level University Entrance Test (ОРТ) can study with 10%.\n
+Students who received 140–159 at National-level University Entrance Test (ОРТ) can study with 5% discount.\n
+Students who successfully graduated school with Red Diploma (красный аттестат) can study with 20% discount.\n
+Student who took first place in Regional Olympiad  (областная олимпиада) can study with 20% discount.\n
+Students who graduated from the "SECOM" GRT preparatory courses (being student at least 4 months with official confirmation letter) (in 2017–2018 academic year) will be able to study with a 20% discount.\n
+Students who took the right to study with 100% discount will have to pay full tuition fee in case student fails one subject during the semester. Student will regain right to continue to study with 100% discount in case there will not be fail subjects in coming semester.\n
+Students who graduated from the lyceum "SAPAT" (9th and 11th grades) will be able to study with a 20% discount.\n
+Students who took 1st place in the competition "Robotics" in the 11th class, organized by the IEO "Sapat", have the right to enter the department "Electronics and Nanoelectronics" with a 25% discount.\n
+In case of two or more siblings are students of AIU in academic year, students are granted 5% discount (each student is entitled).\n
+Students who achieved first place in individual sport games at National and International Sports Olympiads are granted with 30% discounts. Discount is entitled for the five students who come first. Certificate of achievement have to be gained during last year.\n
+Children of citizens who passed away during public uprising on seventh April 2010 can study with 25% discount. Necessary documents should be shown.\n
+Students whose father and mother (both of them together) have passed  away are granted with 30% discount.\n
+Students registering in professional college on 9–11 basis are given a 20% discount.\n
+Students who graduated from the Professional College at the "Ala–Too" International University  on the basis of 9–11 grade  are given a 20% discount.</string>
 
     <string name="scholarships">Scholarships:</string>
-    <string name="scholarships_money">Starting from second year in case of success, three students with top three GPA, from each department awarded scholarships in amount of:
-First Place - 2000 soms
-Second place - 1500 soms
+    <string name="scholarships_money">Starting from second year in case of success, three students with top three GPA, from each department awarded scholarships in amount of:\n
+First Place - 2000 soms\n
+Second place - 1500 soms\n
 Third place - 1000 soms</string>
 
     <!--master overview-->
@@ -388,38 +390,26 @@ Third place - 1000 soms</string>
     <string name="master_graduate_aim">Aim:</string>
     <string name="master_graduate_aim_description">The goal is to involve scientific research in teaching and strengthening the faculty at KGPPI. Criterion for participation in the program is the relevance of the thesis topic. In addition, the defense of the candidate\'s thesis is planned no later than two years. Research and training are carried out in KGPPI. The candidate undertakes to teach and conduct research at KGPPI for at least three years.</string>
     <string name="master_graduate_sphere_research">Spheres of research:</string>
-    <string name="master_graduate_sphere_research_description">The project supports research activities in the following areas:
-
-• Information Security
-
-• Applied computer science - mobile systems
-
+    <string name="master_graduate_sphere_research_description">The project supports research activities in the following areas:\n
+• Information Security\n
+• Applied computer science - mobile systems\n
 The management of the research topics is conducted by the dean of the Faculty of CGAPI, Dr. A. Abdulaev</string>
     <string name="master_graduate_form_of_support">Form of support:</string>
-    <string name="master_graduate_form_of_support_description">• Fee for conducting research in KGPPI in the amount of 250,00 € per month. At the same time, 50% of the workload must be allocated for scientific research;
-
+    <string name="master_graduate_form_of_support_description">• Fee for conducting research in KGPPI in the amount of 250,00 € per month. At the same time, 50% of the workload must be allocated for scientific research;\n
 • Scientific internship with a duration of up to 3 months at the University of Zwickau. Travel expenses up to 700 € are paid from the project and a monthly stipend of 1.000 € is provided. Of this amount, the same must be purchased health insurance in Germany.</string>
     <string name="master_graduate_required_docs">Required documents (in English or German):</string>
-    <string name="master_graduate_required_docs_description">• Completed application form;
-
-• Detailed written presentation (Exposè) on the topic of dissertation work;
-
-• A letter of recommendation from the chief executive;
-
-• Summary;
-
+    <string name="master_graduate_required_docs_description">• Completed application form;\n
+• Detailed written presentation (Exposè) on the topic of dissertation work;\n
+• A letter of recommendation from the chief executive;\n
+• Summary;\n
 • Certificate certifying knowledge of German or English at level B1.</string>
     <string name="master_graduate_selection_com">Selection Commission:</string>
-    <string name="master_graduate_selection_com_description">• Dean of the CGAPI, Dr. Abdulaev AA;
-
+    <string name="master_graduate_selection_com_description">• Dean of the CGAPI, Dr. Abdulaev A.A.;\n
 • Project Manager of DAAD.</string>
     <string name="master_graduate_app_deadline">Application deadline:</string>
-    <string name="master_graduate_app_deadline_description">• no later than August 31, 2018;
-
-• send to kgfi.project@gmail.com
-
-The results of the selection will be known on September 15, 2018.
-
+    <string name="master_graduate_app_deadline_description">• no later than August 31, 2018;\n
+• send to kgfi.project@gmail.com\n
+The results of the selection will be known on September 15, 2018.\n
 If you have any questions, please contact: kgfi.project@gmail.com</string>
 
     <!--master admission-->
@@ -428,42 +418,30 @@ If you have any questions, please contact: kgfi.project@gmail.com</string>
     <string name="master_requirements_a">Requirements on the specialty:</string>
     <string name="master_requirements_a_description">Bachelor\'s degree or computer scientist with 75% performance over the past two years. A bachelor\'s degree or a technical degree is also accepted with an academic achievement of 85% in subjects related to computer science over the last two years of training. These competences must be documented. Professional programming activities can be recognized as fulfilling the criterion for admission. If necessary, the student must listen to the courses on in-depth programming and software development in the Bachelor\'s degree program of KGPPI or Alatoo University. These compulsory courses are read not in the evening or on the weekends. For possible courses, a fee is charged in addition to the principal amount of the tuition fee.</string>
     <string name="master_requirements_b">Requirements for foreign languages:</string>
-    <string name="master_requirements_b_description">▪ English B2 or
-
-▪ English B1 or German B2
-
-The level of English is determined by the teachers of the University of Alatoo.
-
+    <string name="master_requirements_b_description">▪ English B2 or\n
+▪ English B1 or German B2\n
+The level of English is determined by the teachers of the University of Alatoo.\n
 The level of German language proficiency is determined by the teachers of KGFPI KGUSTA</string>
     <string name="master_docs">List of documents required for admission:</string>
-    <string name="master_docs_description">Documents for admission to the magistracy
-
-1. Application
-
-2. The original of the bachelor\'s degree (specialist) with the application of the extract from the record sheet
-
-3. Copy of the Diploma Supplement
-
-4. 2 pictures of 3x4
-
-5. Copy of passport (original for viewing)
-
-6. The contract
-
+    <string name="master_docs_description">Documents for admission to the magistracy\n
+1. Application\n
+2. The original of the bachelor\'s degree (specialist) with the application of the extract from the record sheet\n
+3. Copy of the Diploma Supplement\n
+4. 2 pictures of 3x4\n
+5. Copy of passport (original for viewing)\n
+6. The contract\n
 7. Personal account of personnel</string>
     <string name="master_note">Note for international students:</string>
-    <string name="master_note_description">Note to foreign citizens
-
+    <string name="master_note_description">Note to foreign citizens\n
 Translation of the passport, diploma and its insert into Kyrgyz or Russian (the translation must be confirmed by a certified notary or translation firms).</string>
-
     <string name="master_deadline">Deadline:</string>
-    <string name="master_deadline_description">Documents for admission to the Master\'s program are accepted until September 30, 17
-        at the International University of Alatoo, at the address: Bishkek, Tunguch microdistrict, Ankara str., 1/8
-
+    <string name="master_deadline_description">Documents for admission to the Master\'s program are accepted until September 30, 17\n
+        at the International University of Alatoo, at the address: Bishkek, Tunguch microdistrict, Ankara str., 1/8\n
 Telephones for information: 0312 54-92-38, 0312 63-14-25</string>
 
     <!--academic calendar-->
-    <string name="academic_calendar_2018_2019">Academic Calendar 2018 – 2019</string>
+    <string name="academic_calendar_2018_2019">Academic Calendar\n 2018 – 2019</string>
+
     <string-array name="academic_names">
         <item>|FALL SEMESTER</item>
         <item>Registration</item>

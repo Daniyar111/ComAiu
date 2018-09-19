@@ -32,7 +32,7 @@ public class HomeFragment extends BaseFragment implements  HomeContract.View{
 
     private void flipImages(View view){
         mViewFlipper = view.findViewById(R.id.imageFlipper);
-        mViewFlipper.setFlipInterval(2000);
+        mViewFlipper.setFlipInterval(3000);
         mViewFlipper.setInAnimation(getContext(), R.anim.left_to_center);
         mViewFlipper.setOutAnimation(getContext(), R.anim.center_to_right);
         mViewFlipper.startFlipping();

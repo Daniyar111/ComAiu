@@ -5,30 +5,32 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="7sp"
-    android:weightSum="4">
+    android:background="@color/colorSuperLightGrey"
+    android:layout_marginTop="6sp">
 
     <TextView
         android:id="@+id/textViewTime"
-        android:layout_width="0sp"
+        android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:textSize="19sp"
+        android:textSize="16sp"
         android:layout_gravity="center"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textColor="@android:color/black"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/textViewSubject"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"/>
         <TextView
             android:id="@+id/textViewTeacher"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"/>
     </LinearLayout>
 
 </LinearLayout>

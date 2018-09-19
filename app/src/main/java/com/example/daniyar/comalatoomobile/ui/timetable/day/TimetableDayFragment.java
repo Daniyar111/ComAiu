@@ -1,5 +1,7 @@
 package com.example.daniyar.comalatoomobile.ui.timetable.day;
 
+import android.app.DialogFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,18 +9,25 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.daniyar.comalatoomobile.ComApplication;
 import com.example.daniyar.comalatoomobile.R;
 import com.example.daniyar.comalatoomobile.data.entity.timetable.Week;
 import com.example.daniyar.comalatoomobile.ui.BaseFragment;
+import com.example.daniyar.comalatoomobile.ui.timetable.TimetableContractCallback;
+import com.example.daniyar.comalatoomobile.ui.timetable.ViewPagerCallback;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimetableDayFragment extends BaseFragment implements TimetableDayContract.View, View.OnClickListener {
+import io.realm.Realm;
+import io.realm.RealmList;
+
+public class TimetableDayFragment extends BaseFragment implements TimetableDayContract.View, View.OnClickListener{
 
     private TimetableDayPresenter mPresenter;
     private TextView mTextViewDay, mTextViewOneA, mTextViewOneB, mTextViewTwo, mTextViewTwoA, mTextViewTwoB, mTextViewThree, mTextViewFour;
@@ -26,24 +35,22 @@ public class TimetableDayFragment extends BaseFragment implements TimetableDayCo
     private TimetableDayAdapter mAdapter;
     private String mDay;
     private Week mWeek;
-    private ArrayList<String> mTimes;
+    private RealmList<String> mTimes;
 
     @Override
     protected int getViewLayout() {
         return R.layout.fragment_timetable_day;
     }
 
-    public static TimetableDayFragment newInstance(String day, List<String> times, Week week){
+    public static TimetableDayFragment newInstance(String day, ArrayList<String> times, Week week){
 
         TimetableDayFragment fragment = new TimetableDayFragment();
         Bundle bundle = new Bundle();
         bundle.putString("day", day);
-        Gson gsonTime = new Gson();
-        String jsonTime = gsonTime.toJson(times);
-        bundle.putStringArrayList("times", (ArrayList<String>) times);
         Gson gson = new Gson();
-        String json = gson.toJson(week);
-        bundle.putString("week", json);
+        bundle.putStringArrayList("times", times);
+        String weekJson = gson.toJson(week);
+        bundle.putString("week", weekJson);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -52,11 +59,11 @@ public class TimetableDayFragment extends BaseFragment implements TimetableDayCo
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mPresenter = new TimetableDayPresenter();
+        mPresenter = new TimetableDayPresenter(Realm.getDefaultInstance(), ComApplication.get(getContext()).getSQLiteHelper());
         mPresenter.bind(this);
         initializeViews(view);
         updateData();
-
+        mPresenter.updateGradeTimetable(mWeek);
     }
 
     private void initializeViews(View view){
@@ -81,15 +88,13 @@ public class TimetableDayFragment extends BaseFragment implements TimetableDayCo
 
     private void updateData(){
         if(getArguments() != null){
-//            Gson gson = new Gson();
-//            String json = mSharedPreferences.getString("timetable", "");
-//            TimetableModel timetableModel = gson.fromJson(json, TimetableModel.class);
-//            if(timetableModel != null){
-//                Log.d("SHAREDDANI", "onOptionsItemSelected: " + timetableModel.toString());
-//            }
             mDay = getArguments().getString("day");
-            mWeek = getArguments().getParcelable("week");
-            mTimes = getArguments().getStringArrayList("times");
+            Gson gson = new Gson();
+            String weekJson = getArguments().getString("week");
+            mWeek = gson.fromJson(weekJson, Week.class);
+            RealmList<String> times = new RealmList<>();
+            times.addAll(getArguments().getStringArrayList("times"));
+            mTimes = times;
 
             mTextViewDay.setText(mDay);
 
@@ -144,7 +149,29 @@ public class TimetableDayFragment extends BaseFragment implements TimetableDayCo
         }
     }
 
-    private void updateAdapter(String grade){
+    @Override
+    public void updateAdapter(String grade){
+        if(grade.equals("1a")){
+            controlTextColor(R.color.colorBlue, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent);
+        }
+        if(grade.equals("1b")){
+            controlTextColor(android.R.color.transparent, R.color.colorBlue, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent);
+        }
+        if(grade.equals("2")){
+            controlTextColor(android.R.color.transparent, android.R.color.transparent, R.color.colorBlue, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent);
+        }
+        if(grade.equals("2a")){
+            controlTextColor(android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, R.color.colorBlue, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent);
+        }
+        if(grade.equals("2b")){
+            controlTextColor(android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, R.color.colorBlue, android.R.color.transparent, android.R.color.transparent);
+        }
+        if(grade.equals("3")){
+            controlTextColor(android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, R.color.colorBlue, android.R.color.transparent);
+        }
+        if(grade.equals("4")){
+            controlTextColor(android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, android.R.color.transparent, R.color.colorBlue);
+        }
         mAdapter = new TimetableDayAdapter(getContext(), mTimes, mWeek, grade);
         mRecyclerViewSubjects.setAdapter(mAdapter);
     }
@@ -153,6 +180,18 @@ public class TimetableDayFragment extends BaseFragment implements TimetableDayCo
         textView.setText(grade);
         textView.setVisibility(View.VISIBLE);
     }
+
+    private void controlTextColor(int first, int second, int third, int forth, int fifth, int sixth, int seventh){
+        mTextViewOneA.setBackgroundResource(first);
+        mTextViewOneB.setBackgroundResource(second);
+        mTextViewTwo.setBackgroundResource(third);
+        mTextViewTwoA.setBackgroundResource(forth);
+        mTextViewTwoB.setBackgroundResource(fifth);
+        mTextViewThree.setBackgroundResource(sixth);
+        mTextViewFour.setBackgroundResource(seventh);
+    }
+
+
 
     @Override
     public void onDestroyView() {
