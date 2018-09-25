@@ -16,7 +16,7 @@
         android:background="@drawable/toolbar"
         android:theme="@style/ToolbarColoredBackArrow"/>
 
-    <com.example.daniyar.comalatoomobile.ui.custom_views.TextFontHeader
+    <com.comaiu.daniyar.comalatoomobile.ui.custom_views.TextFontHeader
         android:id="@+id/textViewName"
         android:textSize="26sp"
         android:layout_width="match_parent"

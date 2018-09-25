@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.example.daniyar.comalatoomobile.ui.custom_views.TextFonItemName
+    <com.comaiu.daniyar.comalatoomobile.ui.custom_views.TextFonItemName
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/this_function"
