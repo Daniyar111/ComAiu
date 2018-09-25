@@ -1,21 +1,16 @@
 package com.example.daniyar.comalatoomobile.ui.timetable.day;
 
 import com.example.daniyar.comalatoomobile.data.db.SQLiteHelper;
-import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
 import com.example.daniyar.comalatoomobile.data.entity.timetable.Week;
 
-import io.realm.Realm;
-import io.realm.RealmList;
 
 public class TimetableDayPresenter implements TimetableDayContract.Presenter {
 
     private TimetableDayContract.View mView;
-    private Realm mRealm;
     private SQLiteHelper mSQLiteHelper;
     private String mGrade;
 
-    TimetableDayPresenter(Realm realm, SQLiteHelper sqLiteHelper){
-        mRealm = realm;
+    TimetableDayPresenter(SQLiteHelper sqLiteHelper){
         mSQLiteHelper = sqLiteHelper;
     }
 

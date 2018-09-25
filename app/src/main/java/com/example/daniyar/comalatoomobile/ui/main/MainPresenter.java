@@ -17,8 +17,4 @@ public class MainPresenter implements MainContract.Presenter {
     public void unbind() {
         mView = null;
     }
-
-    private boolean isViewAttached(){
-        return mView != null;
-    }
 }

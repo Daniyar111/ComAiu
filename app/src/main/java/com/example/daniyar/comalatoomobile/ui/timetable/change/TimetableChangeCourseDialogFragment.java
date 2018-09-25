@@ -19,7 +19,6 @@ import android.widget.RadioGroup;
 
 import com.example.daniyar.comalatoomobile.ComApplication;
 import com.example.daniyar.comalatoomobile.R;
-import com.example.daniyar.comalatoomobile.ui.timetable.TimetableContractCallback;
 
 public class TimetableChangeCourseDialogFragment extends DialogFragment implements TimetableChangeCourseDialogContract.View, RadioGroup.OnCheckedChangeListener, View.OnClickListener {
 

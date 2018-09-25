@@ -17,8 +17,4 @@ public class HomePresenter implements HomeContract.Presenter {
     public void unbind() {
         mView = null;
     }
-
-    private boolean isViewAttached(){
-        return mView != null;
-    }
 }

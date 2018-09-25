@@ -19,18 +19,15 @@ public class TimetableChangeCourseDialogPresenter implements TimetableChangeCour
     @Override
     public void saveGrade(String grade) {
         mGradesModel.setGrade(grade);
-        Log.d("SQLITEDAN", "saveGrade: " + grade);
         mSQLiteHelper.saveRadioButtons(mGradesModel);
     }
 
     @Override
     public void checkGrade() {
         if(mSQLiteHelper.getRadioButtons().getGrade() != null && isViewAttached()){
-            Log.d("SQLITEDAN", "not null: ");
             mView.setGradeFromDb(mSQLiteHelper.getRadioButtons().getGrade());
         }
         else{
-            Log.d("SQLITEDAN", "null: ");
             mView.setGrade();
         }
     }
