@@ -1,89 +1,91 @@
 
 package com.example.daniyar.comalatoomobile.data.entity.timetable;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import io.realm.RealmList;
-import io.realm.RealmObject;
+import java.util.ArrayList;
 
-public class Week extends RealmObject {
+public class Week implements Parcelable {
 
     @SerializedName("1a")
     @Expose
-    private RealmList<OneA> mOneAS = null;
+    private ArrayList<OneA> mOneAS = null;
     @SerializedName("1b")
     @Expose
-    private RealmList<OneB> mOneBS = null;
+    private ArrayList<OneB> mOneBS = null;
     @SerializedName("2")
     @Expose
-    private RealmList<Two> mTwos = null;
+    private ArrayList<Two> mTwos = null;
     @SerializedName("3")
     @Expose
-    private RealmList<Three> mThrees = null;
+    private ArrayList<Three> mThrees = null;
     @SerializedName("4")
     @Expose
-    private RealmList<Four> mFours = null;
+    private ArrayList<Four> mFours = null;
     @SerializedName("2a")
     @Expose
-    private RealmList<TwoA> mTwoAS = null;
+    private ArrayList<TwoA> mTwoAS = null;
     @SerializedName("2b")
     @Expose
-    private RealmList<TwoB> mTwoBS = null;
+    private ArrayList<TwoB> mTwoBS = null;
 
-    public RealmList<OneA> getOneAS() {
+    public ArrayList<OneA> getOneAS() {
         return mOneAS;
     }
 
-    public void setOneAS(RealmList<OneA> oneAS) {
+    public void setOneAS(ArrayList<OneA> oneAS) {
         mOneAS = oneAS;
     }
 
-    public RealmList<OneB> getOneBS() {
+    public ArrayList<OneB> getOneBS() {
         return mOneBS;
     }
 
-    public void setOneBS(RealmList<OneB> oneBS) {
+    public void setOneBS(ArrayList<OneB> oneBS) {
         mOneBS = oneBS;
     }
 
-    public RealmList<Two> getTwos() {
+    public ArrayList<Two> getTwos() {
         return mTwos;
     }
 
-    public void setTwos(RealmList<Two> twos) {
+    public void setTwos(ArrayList<Two> twos) {
         mTwos = twos;
     }
 
-    public RealmList<Three> getThrees() {
+    public ArrayList<Three> getThrees() {
         return mThrees;
     }
 
-    public void setThrees(RealmList<Three> threes) {
+    public void setThrees(ArrayList<Three> threes) {
         mThrees = threes;
     }
 
-    public RealmList<Four> getFours() {
+    public ArrayList<Four> getFours() {
         return mFours;
     }
 
-    public void setFours(RealmList<Four> fours) {
+    public void setFours(ArrayList<Four> fours) {
         mFours = fours;
     }
 
-    public RealmList<TwoA> getTwoAS() {
+    public ArrayList<TwoA> getTwoAS() {
         return mTwoAS;
     }
 
-    public void setTwoAS(RealmList<TwoA> twoAS) {
+    public void setTwoAS(ArrayList<TwoA> twoAS) {
         mTwoAS = twoAS;
     }
 
-    public RealmList<TwoB> getTwoBS() {
+    public ArrayList<TwoB> getTwoBS() {
         return mTwoBS;
     }
 
-    public void setTwoBS(RealmList<TwoB> twoBS) {
+    public void setTwoBS(ArrayList<TwoB> twoBS) {
         mTwoBS = twoBS;
     }
 
@@ -99,4 +101,115 @@ public class Week extends RealmObject {
                 ", mTwoBS=" + mTwoBS +
                 '}';
     }
+
+    public Week(){}
+
+    protected Week(Parcel in) {
+        if (in.readByte() == 0x01) {
+            mOneAS = new ArrayList<OneA>();
+            in.readList(mOneAS, OneA.class.getClassLoader());
+        } else {
+            mOneAS = null;
+        }
+        if (in.readByte() == 0x01) {
+            mOneBS = new ArrayList<OneB>();
+            in.readList(mOneBS, OneB.class.getClassLoader());
+        } else {
+            mOneBS = null;
+        }
+        if (in.readByte() == 0x01) {
+            mTwos = new ArrayList<Two>();
+            in.readList(mTwos, Two.class.getClassLoader());
+        } else {
+            mTwos = null;
+        }
+        if (in.readByte() == 0x01) {
+            mThrees = new ArrayList<Three>();
+            in.readList(mThrees, Three.class.getClassLoader());
+        } else {
+            mThrees = null;
+        }
+        if (in.readByte() == 0x01) {
+            mFours = new ArrayList<Four>();
+            in.readList(mFours, Four.class.getClassLoader());
+        } else {
+            mFours = null;
+        }
+        if (in.readByte() == 0x01) {
+            mTwoAS = new ArrayList<TwoA>();
+            in.readList(mTwoAS, TwoA.class.getClassLoader());
+        } else {
+            mTwoAS = null;
+        }
+        if (in.readByte() == 0x01) {
+            mTwoBS = new ArrayList<TwoB>();
+            in.readList(mTwoBS, TwoB.class.getClassLoader());
+        } else {
+            mTwoBS = null;
+        }
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        if (mOneAS == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(mOneAS);
+        }
+        if (mOneBS == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(mOneBS);
+        }
+        if (mTwos == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(mTwos);
+        }
+        if (mThrees == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(mThrees);
+        }
+        if (mFours == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(mFours);
+        }
+        if (mTwoAS == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(mTwoAS);
+        }
+        if (mTwoBS == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(mTwoBS);
+        }
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<Week> CREATOR = new Parcelable.Creator<Week>() {
+        @Override
+        public Week createFromParcel(Parcel in) {
+            return new Week(in);
+        }
+
+        @Override
+        public Week[] newArray(int size) {
+            return new Week[size];
+        }
+    };
 }

@@ -3,11 +3,9 @@ package com.example.daniyar.comalatoomobile.ui.bachelor.courses;
 import android.util.Log;
 
 import com.example.daniyar.comalatoomobile.R;
-import com.example.daniyar.comalatoomobile.data.entity.BachelorCoursesModel;
 import com.example.daniyar.comalatoomobile.data.manager.ResourceManager;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;

@@ -1,6 +1,5 @@
 package com.example.daniyar.comalatoomobile.ui.bachelor;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 

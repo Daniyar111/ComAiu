@@ -10,23 +10,16 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.daniyar.comalatoomobile.ComApplication;
 import com.example.daniyar.comalatoomobile.R;
-import com.example.daniyar.comalatoomobile.data.entity.ViewPagerItem;
-import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
 import com.example.daniyar.comalatoomobile.data.manager.RetrofitServiceManager;
 import com.example.daniyar.comalatoomobile.data.manager.SystemServiceManager;
 import com.example.daniyar.comalatoomobile.ui.BaseFragment;
 import com.example.daniyar.comalatoomobile.ui.timetable.change.TimetableChangeCourseDialogFragment;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-
-import io.realm.Realm;
 
 public class TimetableFragment extends BaseFragment implements TimetableContract.View, View.OnClickListener{
 
@@ -35,6 +28,7 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     private TimetablePagerAdapter mAdapter;
     private Button mButtonUpdate, mButtonChange;
     private TimetableChangeCourseDialogFragment mDialogFragment;
+    private ProgressBar mProgressBar;
 
     @Override
     protected int getViewLayout() {
@@ -45,7 +39,7 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mPresenter = new TimetablePresenter(new RetrofitServiceManager(getContext()), ComApplication.get(getContext()).getSQLiteHelper(), getActivity().getPreferences(Context.MODE_PRIVATE), new SystemServiceManager(getContext()), Realm.getDefaultInstance());
+        mPresenter = new TimetablePresenter(new RetrofitServiceManager(getContext()), getActivity().getPreferences(Context.MODE_PRIVATE), new SystemServiceManager(getContext()));
         mPresenter.bind(this);
         initializeViews(view);
         mPresenter.getTimetableData();
@@ -57,6 +51,7 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
         mViewPager = view.findViewById(R.id.viewPager);
         mButtonChange = view.findViewById(R.id.buttonChange);
         mButtonUpdate = view.findViewById(R.id.buttonUpdate);
+        mProgressBar = view.findViewById(R.id.progressBar);
         mButtonUpdate.setOnClickListener(this);
         mButtonChange.setOnClickListener(this);
     }
@@ -98,19 +93,20 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1){
-            Log.d("ACTIVITYDANI", "here");
             mAdapter.notifyDataSetChanged();
         }
     }
 
     @Override
     public void hideLoadingIndicator() {
-
+        mProgressBar.setVisibility(View.GONE);
+        mViewPager.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void showLoadingIndicator() {
-
+        mProgressBar.setVisibility(View.VISIBLE);
+        mViewPager.setVisibility(View.GONE);
     }
 
     @Override

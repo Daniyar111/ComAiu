@@ -17,8 +17,4 @@ public class BachelorAdmissionPresenter implements BachelorAdmissionContract.Pre
     public void unbind() {
         mView = null;
     }
-
-    private boolean isViewAttached(){
-        return mView != null;
-    }
 }

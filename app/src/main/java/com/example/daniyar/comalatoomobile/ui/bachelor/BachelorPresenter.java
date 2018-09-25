@@ -17,8 +17,4 @@ public class BachelorPresenter implements BachelorContract.Presenter {
     public void unbind() {
         mView = null;
     }
-
-    private boolean isViewAttached(){
-        return mView != null;
-    }
 }

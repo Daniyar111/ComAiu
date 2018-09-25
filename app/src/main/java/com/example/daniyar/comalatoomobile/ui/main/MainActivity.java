@@ -1,37 +1,24 @@
 package com.example.daniyar.comalatoomobile.ui.main;
 
-import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.daniyar.comalatoomobile.ComApplication;
 import com.example.daniyar.comalatoomobile.R;
-import com.example.daniyar.comalatoomobile.data.db.SQLiteHelper;
-import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
 import com.example.daniyar.comalatoomobile.data.widget.BottomNavigationViewHelper;
 import com.example.daniyar.comalatoomobile.ui.BaseActivity;
 import com.example.daniyar.comalatoomobile.ui.exams.ExamsFragment;
 import com.example.daniyar.comalatoomobile.ui.home.HomeFragment;
 import com.example.daniyar.comalatoomobile.ui.news.NewsFragment;
 import com.example.daniyar.comalatoomobile.ui.timetable.TimetableFragment;
-import com.google.gson.Gson;
-
-import java.sql.Time;
-
-import io.realm.Realm;
 
 public class MainActivity extends BaseActivity implements MainContract.View{
 
     private MainPresenter mPresenter;
-    private SQLiteHelper mSQLiteHelper;
-    private SharedPreferences mSharedPreferences;
-    private Realm mRealm;
-
     @Override
     protected int getViewLayout() {
         return R.layout.activity_main;
@@ -49,9 +36,6 @@ public class MainActivity extends BaseActivity implements MainContract.View{
 
         mPresenter = new MainPresenter();
         mPresenter.bind(this);
-        mSQLiteHelper = ComApplication.get(this).getSQLiteHelper();
-        mSharedPreferences = getPreferences(MODE_PRIVATE);
-        mRealm = Realm.getDefaultInstance();
 
         getToolbar("", false);
         getDrawer();

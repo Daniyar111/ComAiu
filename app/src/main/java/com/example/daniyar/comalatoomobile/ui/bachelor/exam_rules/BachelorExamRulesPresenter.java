@@ -34,8 +34,4 @@ public class BachelorExamRulesPresenter implements BachelorExamRulesContract.Pre
     public void unbind() {
         mView = null;
     }
-
-    private boolean isViewAttached(){
-        return mView != null;
-    }
 }

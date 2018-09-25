@@ -1,19 +1,14 @@
 package com.example.daniyar.comalatoomobile.ui.academ_calendar;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import com.example.daniyar.comalatoomobile.R;
 import com.example.daniyar.comalatoomobile.data.manager.ResourceManager;
 import com.example.daniyar.comalatoomobile.ui.BaseActivity;
-
-import static java.security.AccessController.getContext;
-
 public class AcademicCalendarActivity extends BaseActivity implements AcademicCalendarContract.View {
 
     private AcademicCalendarPresenter mPresenter;

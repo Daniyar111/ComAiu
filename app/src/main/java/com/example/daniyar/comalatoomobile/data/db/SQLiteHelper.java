@@ -7,9 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.daniyar.comalatoomobile.data.entity.GradesModel;
-import com.example.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
-
-import java.util.ArrayList;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
 

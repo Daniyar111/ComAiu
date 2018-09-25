@@ -3,8 +3,6 @@ package com.example.daniyar.comalatoomobile.ui.timetable.day;
 import com.example.daniyar.comalatoomobile.data.entity.timetable.Week;
 import com.example.daniyar.comalatoomobile.ui.LifeCycle;
 
-import io.realm.RealmList;
-
 public interface TimetableDayContract {
 
     interface View{
