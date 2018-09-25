@@ -9,8 +9,8 @@ import com.comaiu.daniyar.comalatoomobile.data.network.RetrofitService;
 
 public class ComApplication extends Application {
 
-    private RetrofitService mService;
     private SQLiteHelper mSQLiteHelper;
+    private RetrofitService mService;
 
     @Override
     public void onCreate() {
