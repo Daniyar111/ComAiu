@@ -43,7 +43,6 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
         mPresenter.bind(this);
         initializeViews(view);
         mPresenter.getTimetableData();
-        Toast.makeText(getContext(), getResources().getString(R.string.swipe), Toast.LENGTH_LONG).show();
 
     }
 
@@ -60,7 +59,7 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     public void onSuccess(List<Fragment> fragments) {
 
         if(getActivity() != null){
-            mAdapter = new TimetablePagerAdapter(getActivity().getSupportFragmentManager(), fragments);
+            mAdapter = new TimetablePagerAdapter(getChildFragmentManager(), fragments);
             mViewPager.setAdapter(mAdapter);
             mViewPager.setCurrentItem(mPresenter.getCurrentDay());
         }
