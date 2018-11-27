@@ -2,8 +2,8 @@
 Redesign the existing Computer Science department's website, and creating a application for Android. The mini project's purpose is to teach students and practice Git VCS. Teach how to work and collaborate on the project using the VCS Git.<br><br> 
 <h2>Students list:</h2> 
 <ul>
-  <li>Akhunzhanov Azamatzhon - teamleader</li> 
-  <li>Zarlyk ZHusubaliev- html, css designer</li> 
+  <li>Akhunzhanov Azamatzhon - teamleader, JS, PHP developer</li> 
+  <li>Zarlyk ZHusubaliev- html, css designer, problem solver, QA tester</li> 
   <li>Changylov Daniyar - mobile application developer</li> 
 </ul>
 
