@@ -4,27 +4,22 @@ import android.app.Application;
 import android.content.Context;
 
 import com.comaiu.daniyar.comalatoomobile.data.db.SQLiteHelper;
-import com.comaiu.daniyar.comalatoomobile.data.network.NetworkBuilder;
-import com.comaiu.daniyar.comalatoomobile.data.network.RetrofitService;
+import com.comaiu.daniyar.comalatoomobile.utils.PreferenceUtils;
 
 public class ComApplication extends Application {
 
     private SQLiteHelper mSQLiteHelper;
-    private RetrofitService mService;
+    private PreferenceUtils mPreferenceUtils;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mService = NetworkBuilder.initService();
         mSQLiteHelper = new SQLiteHelper(getApplicationContext());
+        mPreferenceUtils = new PreferenceUtils(this);
     }
 
     public static ComApplication get(Context context){
         return (ComApplication) context.getApplicationContext();
-    }
-
-    public RetrofitService getService() {
-        return mService;
     }
 
     public SQLiteHelper getSQLiteHelper() {

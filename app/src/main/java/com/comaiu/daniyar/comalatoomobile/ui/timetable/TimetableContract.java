@@ -13,6 +13,8 @@ public interface TimetableContract {
         void onSuccess(List<Fragment> fragments);
 
         void onFailure(String message);
+
+        void toast(String message);
     }
 
     interface Presenter extends LifeCycle<View>{
@@ -24,5 +26,7 @@ public interface TimetableContract {
         void getTimetableData();
 
         int getCurrentDay();
+
+        void onDestroy();
     }
 }

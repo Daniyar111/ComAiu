@@ -14,7 +14,6 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.comaiu.daniyar.comalatoomobile.R;
-import com.comaiu.daniyar.comalatoomobile.data.manager.RetrofitServiceManager;
 import com.comaiu.daniyar.comalatoomobile.data.manager.SystemServiceManager;
 import com.comaiu.daniyar.comalatoomobile.ui.BaseFragment;
 import com.comaiu.daniyar.comalatoomobile.ui.timetable.change.TimetableChangeCourseDialogFragment;
@@ -39,11 +38,10 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mPresenter = new TimetablePresenter(new RetrofitServiceManager(getContext()), getActivity().getPreferences(Context.MODE_PRIVATE), new SystemServiceManager(getContext()));
+        mPresenter = new TimetablePresenter(getActivity().getPreferences(Context.MODE_PRIVATE), new SystemServiceManager(getContext()));
         mPresenter.bind(this);
         initializeViews(view);
         mPresenter.getTimetableData();
-
     }
 
     private void initializeViews(View view){
@@ -68,6 +66,11 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     @Override
     public void onFailure(String message) {
         Log.d("SUCCESS_DAN", message);
+    }
+
+    @Override
+    public void toast(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -111,6 +114,7 @@ public class TimetableFragment extends BaseFragment implements TimetableContract
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        mPresenter.onDestroy();
         mPresenter.unbind();
     }
 }

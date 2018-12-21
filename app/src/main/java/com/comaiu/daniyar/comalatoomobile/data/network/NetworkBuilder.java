@@ -3,6 +3,7 @@ package com.comaiu.daniyar.comalatoomobile.data.network;
 import android.support.annotation.NonNull;
 
 import com.comaiu.daniyar.comalatoomobile.BuildConfig;
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -16,38 +17,61 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public final class NetworkBuilder {
 
-    private static RetrofitService sService = null;
+    private static volatile RetrofitService sService;
+
+    private static OkHttpClient sClient;
+
+    public NetworkBuilder(){}
 
     public static RetrofitService initService(){
 
-        if(sService == null){
-            sService = new Retrofit.Builder()
-                    .baseUrl(BuildConfig.BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .client(getClient())
-                    .build()
-                    .create(RetrofitService.class);
+        RetrofitService service = sService;
+        if(service == null){
+            synchronized (NetworkBuilder.class){
+                service = sService;
+                if(service == null){
+                    service = sService = buildRetrofitTimetable().create(RetrofitService.class);
+                }
+            }
         }
-        return sService;
+        return service;
+    }
+
+    @NonNull
+    private static Retrofit buildRetrofitTimetable(){
+        return new Retrofit.Builder()
+                .baseUrl(BuildConfig.TIMETABLE_URL)
+                .client(getClient())
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .build();
+    }
+
+    public static void recreateTimetableService(){
+        sClient = null;
+        sClient = getClient();
+        sService = buildRetrofitTimetable().create(RetrofitService.class);
     }
 
     private static OkHttpClient getClient(){
 
+        OkHttpClient client = sClient;
+        if(client == null){
+            synchronized (NetworkBuilder.class){
+                client = sClient;
+                if(client == null){
+                    client = sClient = buildClient();
+                }
+            }
+        }
+        return client;
+    }
+
+    @NonNull
+    private static OkHttpClient buildClient(){
         return new OkHttpClient.Builder()
-                .addInterceptor(new Interceptor() {
-                    @Override
-                    public Response intercept(@NonNull Chain chain) throws IOException {
-
-                        Request.Builder ongoing = chain.request()
-                                .newBuilder()
-                                .addHeader("Accept", "application/json;versions=1");
-
-                        return chain.proceed(ongoing.build());
-                    }
-                })
-                .writeTimeout(30, TimeUnit.SECONDS)
-                .connectTimeout(30, TimeUnit.SECONDS)
-                .readTimeout(30, TimeUnit.SECONDS)
+                .addInterceptor(LoggingInterceptor.create())
+                .addInterceptor(BaseInterceptor.create())
                 .build();
     }
 }

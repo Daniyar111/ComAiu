@@ -173,8 +173,6 @@ public class TimetableDayFragment extends BaseFragment implements TimetableDayCo
         mTextViewFour.setBackgroundResource(seventh);
     }
 
-
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();

@@ -3,13 +3,11 @@ package com.comaiu.daniyar.comalatoomobile.ui.timetable;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 
 import com.comaiu.daniyar.comalatoomobile.data.entity.timetable.TimetableModel;
-import com.comaiu.daniyar.comalatoomobile.data.manager.RetrofitServiceManager;
 import com.comaiu.daniyar.comalatoomobile.data.manager.SystemServiceManager;
+import com.comaiu.daniyar.comalatoomobile.data.repository.RepositoryProvider;
 import com.comaiu.daniyar.comalatoomobile.ui.timetable.day.TimetableDayFragment;
 import com.google.gson.Gson;
 
@@ -17,21 +15,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import io.reactivex.disposables.Disposable;
 
 public class TimetablePresenter implements TimetableContract.Presenter {
 
     private TimetableContract.View mView;
-    private RetrofitServiceManager mServiceManager;
     private TimetableModel mTimetableModel;
     private List<Fragment> mFragments;
     private SharedPreferences mSharedPreferences;
     private SystemServiceManager mSystemServiceManager;
+    private Disposable mDisposable;
 
-    TimetablePresenter(RetrofitServiceManager serviceManager, SharedPreferences sharedPreferences, SystemServiceManager systemServiceManager){
-        mServiceManager = serviceManager;
+    TimetablePresenter(SharedPreferences sharedPreferences, SystemServiceManager systemServiceManager){
         mFragments = new ArrayList<>();
         mSharedPreferences = sharedPreferences;
         mSystemServiceManager = systemServiceManager;
@@ -66,38 +61,70 @@ public class TimetablePresenter implements TimetableContract.Presenter {
 
     @Override
     public void getTimetable() {
-        if(isViewAttached()){
-            mView.showLoadingIndicator();
-            mServiceManager.getTimetable().enqueue(new Callback<TimetableModel>() {
-                @Override
-                public void onResponse(@NonNull Call<TimetableModel> call, @NonNull Response<TimetableModel> response) {
-                    if(response.body() != null && response.isSuccessful()){
-                        if(isViewAttached()){
-                            mView.hideLoadingIndicator();
-                            mTimetableModel = response.body();
-                            SharedPreferences.Editor editor = mSharedPreferences.edit();
-                            Gson gson = new Gson();
-                            String jsonTimetable = gson.toJson(mTimetableModel);
-                            editor.putString("timetable", jsonTimetable);
-                            editor.apply();
-                            for (int i = 0; i < mTimetableModel.getWeeks().size(); i++) {
-                                ArrayList<String> times = new ArrayList<>(mTimetableModel.getTimes());
-                                mFragments.add(TimetableDayFragment.newInstance(mTimetableModel.getWeekDays().get(i),  times, mTimetableModel.getWeeks().get(i)));
-                            }
-                            mView.onSuccess(mFragments);
-                        }
-                    }
-                }
+//        if(isViewAttached()){
+//            mView.showLoadingIndicator();
+//            mServiceManager.getTimetable().enqueue(new Callback<TimetableModel>() {
+//                @Override
+//                public void onResponse(@NonNull Call<TimetableModel> call, @NonNull Response<TimetableModel> response) {
+//                    if(response.body() != null && response.isSuccessful()){
+//                        if(isViewAttached()){
+//                            mView.hideLoadingIndicator();
+//                            mTimetableModel = response.body();
+//                            SharedPreferences.Editor editor = mSharedPreferences.edit();
+//                            Gson gson = new Gson();
+//                            String jsonTimetable = gson.toJson(mTimetableModel);
+//                            editor.putString("timetable", jsonTimetable);
+//                            editor.apply();
+//                            for (int i = 0; i < mTimetableModel.getWeeks().size(); i++) {
+//                                ArrayList<String> times = new ArrayList<>(mTimetableModel.getTimes());
+//                                mFragments.add(TimetableDayFragment.newInstance(mTimetableModel.getWeekDays().get(i),  times, mTimetableModel.getWeeks().get(i)));
+//                            }
+//                            mView.onSuccess(mFragments);
+//                        }
+//                    }
+//                }
+//
+//                @Override
+//                public void onFailure(@NonNull Call<TimetableModel> call, @NonNull Throwable t) {
+//                    if(isViewAttached()){
+//                        mView.hideLoadingIndicator();
+//                        mView.onFailure(t.getMessage());
+//                    }
+//                }
+//            });
+//        }
 
-                @Override
-                public void onFailure(@NonNull Call<TimetableModel> call, @NonNull Throwable t) {
+        mDisposable = RepositoryProvider.provideUserRepository()
+                .getTimetable()
+                .doOnSubscribe(disposable -> {
+                    if(isViewAttached()){
+                        mView.showLoadingIndicator();
+                    }
+                })
+                .doOnTerminate(() -> {
                     if(isViewAttached()){
                         mView.hideLoadingIndicator();
-                        mView.onFailure(t.getMessage());
                     }
-                }
-            });
-        }
+                })
+                .subscribe(timetableModel -> {
+                    if(timetableModel != null && isViewAttached()){
+                        mTimetableModel = timetableModel;
+                        SharedPreferences.Editor editor = mSharedPreferences.edit();
+                        Gson gson = new Gson();
+                        String jsonTimetable = gson.toJson(mTimetableModel);
+                        editor.putString("timetable", jsonTimetable);
+                        editor.apply();
+                        for (int i = 0; i < mTimetableModel.getWeeks().size(); i++) {
+                            ArrayList<String> times = new ArrayList<>(mTimetableModel.getTimes());
+                            mFragments.add(TimetableDayFragment.newInstance(mTimetableModel.getWeekDays().get(i),  times, mTimetableModel.getWeeks().get(i)));
+                        }
+                        mView.onSuccess(mFragments);
+                    }
+                }, throwable -> {
+                    if(isViewAttached()){
+                        mView.toast("error");
+                    }
+                });
     }
 
     @Override
@@ -131,5 +158,12 @@ public class TimetablePresenter implements TimetableContract.Presenter {
 
     private boolean isViewAttached(){
         return mView != null;
+    }
+
+    @Override
+    public void onDestroy() {
+        if(mDisposable != null){
+            mDisposable.dispose();
+        }
     }
 }
