@@ -13,79 +13,79 @@ public class Week implements Parcelable {
 
     @SerializedName("1a")
     @Expose
-    private ArrayList<OneA> mOneAS = null;
+    private ArrayList<DayModel> mOneAS = null;
     @SerializedName("1b")
     @Expose
-    private ArrayList<OneB> mOneBS = null;
+    private ArrayList<DayModel> mOneBS = null;
     @SerializedName("2")
     @Expose
-    private ArrayList<Two> mTwos = null;
+    private ArrayList<DayModel> mTwos = null;
     @SerializedName("3")
     @Expose
-    private ArrayList<Three> mThrees = null;
+    private ArrayList<DayModel> mThrees = null;
     @SerializedName("4")
     @Expose
-    private ArrayList<Four> mFours = null;
+    private ArrayList<DayModel> mFours = null;
     @SerializedName("2a")
     @Expose
-    private ArrayList<TwoA> mTwoAS = null;
+    private ArrayList<DayModel> mTwoAS = null;
     @SerializedName("2b")
     @Expose
-    private ArrayList<TwoB> mTwoBS = null;
+    private ArrayList<DayModel> mTwoBS = null;
 
-    public ArrayList<OneA> getOneAS() {
+    public ArrayList<DayModel> getOneAS() {
         return mOneAS;
     }
 
-    public void setOneAS(ArrayList<OneA> oneAS) {
+    public void setOneAS(ArrayList<DayModel> oneAS) {
         mOneAS = oneAS;
     }
 
-    public ArrayList<OneB> getOneBS() {
+    public ArrayList<DayModel> getOneBS() {
         return mOneBS;
     }
 
-    public void setOneBS(ArrayList<OneB> oneBS) {
+    public void setOneBS(ArrayList<DayModel> oneBS) {
         mOneBS = oneBS;
     }
 
-    public ArrayList<Two> getTwos() {
+    public ArrayList<DayModel> getTwos() {
         return mTwos;
     }
 
-    public void setTwos(ArrayList<Two> twos) {
+    public void setTwos(ArrayList<DayModel> twos) {
         mTwos = twos;
     }
 
-    public ArrayList<Three> getThrees() {
+    public ArrayList<DayModel> getThrees() {
         return mThrees;
     }
 
-    public void setThrees(ArrayList<Three> threes) {
+    public void setThrees(ArrayList<DayModel> threes) {
         mThrees = threes;
     }
 
-    public ArrayList<Four> getFours() {
+    public ArrayList<DayModel> getFours() {
         return mFours;
     }
 
-    public void setFours(ArrayList<Four> fours) {
+    public void setFours(ArrayList<DayModel> fours) {
         mFours = fours;
     }
 
-    public ArrayList<TwoA> getTwoAS() {
+    public ArrayList<DayModel> getTwoAS() {
         return mTwoAS;
     }
 
-    public void setTwoAS(ArrayList<TwoA> twoAS) {
+    public void setTwoAS(ArrayList<DayModel> twoAS) {
         mTwoAS = twoAS;
     }
 
-    public ArrayList<TwoB> getTwoBS() {
+    public ArrayList<DayModel> getTwoBS() {
         return mTwoBS;
     }
 
-    public void setTwoBS(ArrayList<TwoB> twoBS) {
+    public void setTwoBS(ArrayList<DayModel> twoBS) {
         mTwoBS = twoBS;
     }
 
@@ -106,44 +106,44 @@ public class Week implements Parcelable {
 
     protected Week(Parcel in) {
         if (in.readByte() == 0x01) {
-            mOneAS = new ArrayList<OneA>();
-            in.readList(mOneAS, OneA.class.getClassLoader());
+            mOneAS = new ArrayList<DayModel>();
+            in.readList(mOneAS, DayModel.class.getClassLoader());
         } else {
             mOneAS = null;
         }
         if (in.readByte() == 0x01) {
-            mOneBS = new ArrayList<OneB>();
-            in.readList(mOneBS, OneB.class.getClassLoader());
+            mOneBS = new ArrayList<DayModel>();
+            in.readList(mOneBS, DayModel.class.getClassLoader());
         } else {
             mOneBS = null;
         }
         if (in.readByte() == 0x01) {
-            mTwos = new ArrayList<Two>();
-            in.readList(mTwos, Two.class.getClassLoader());
+            mTwos = new ArrayList<DayModel>();
+            in.readList(mTwos, DayModel.class.getClassLoader());
         } else {
             mTwos = null;
         }
         if (in.readByte() == 0x01) {
-            mThrees = new ArrayList<Three>();
-            in.readList(mThrees, Three.class.getClassLoader());
+            mThrees = new ArrayList<DayModel>();
+            in.readList(mThrees, DayModel.class.getClassLoader());
         } else {
             mThrees = null;
         }
         if (in.readByte() == 0x01) {
-            mFours = new ArrayList<Four>();
-            in.readList(mFours, Four.class.getClassLoader());
+            mFours = new ArrayList<DayModel>();
+            in.readList(mFours, DayModel.class.getClassLoader());
         } else {
             mFours = null;
         }
         if (in.readByte() == 0x01) {
-            mTwoAS = new ArrayList<TwoA>();
-            in.readList(mTwoAS, TwoA.class.getClassLoader());
+            mTwoAS = new ArrayList<DayModel>();
+            in.readList(mTwoAS, DayModel.class.getClassLoader());
         } else {
             mTwoAS = null;
         }
         if (in.readByte() == 0x01) {
-            mTwoBS = new ArrayList<TwoB>();
-            in.readList(mTwoBS, TwoB.class.getClassLoader());
+            mTwoBS = new ArrayList<DayModel>();
+            in.readList(mTwoBS, DayModel.class.getClassLoader());
         } else {
             mTwoBS = null;
         }

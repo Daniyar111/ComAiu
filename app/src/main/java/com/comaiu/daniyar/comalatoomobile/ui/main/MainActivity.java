@@ -1,5 +1,6 @@
 package com.comaiu.daniyar.comalatoomobile.ui.main;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import com.comaiu.daniyar.comalatoomobile.ComApplication;
 import com.comaiu.daniyar.comalatoomobile.R;
 import com.comaiu.daniyar.comalatoomobile.data.widget.BottomNavigationViewHelper;
 import com.comaiu.daniyar.comalatoomobile.ui.BaseActivity;
+import com.comaiu.daniyar.comalatoomobile.ui.ams.AmsActivity;
 import com.comaiu.daniyar.comalatoomobile.ui.exams.ExamsFragment;
 import com.comaiu.daniyar.comalatoomobile.ui.home.HomeFragment;
 import com.comaiu.daniyar.comalatoomobile.ui.news.NewsFragment;
@@ -78,7 +80,7 @@ public class MainActivity extends BaseActivity implements MainContract.View{
 
         switch (item.getItemId()){
             case R.id.action_item_ams:
-                Toast.makeText(this, "AMS", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, AmsActivity.class));
 
                 return true;
         }

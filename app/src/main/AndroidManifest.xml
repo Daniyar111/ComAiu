@@ -13,7 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +23,9 @@
         <activity android:name=".ui.news.news_details.NewsDetailsActivity" />
         <activity android:name=".ui.bachelor.BachelorActivity" />
         <activity android:name=".ui.master.MasterActivity" />
-        <activity android:name=".ui.academ_calendar.AcademicCalendarActivity"/>
+        <activity android:name=".ui.academ_calendar.AcademicCalendarActivity" />
+        <activity android:name=".ui.ams.AmsActivity" />
+        <activity android:name=".ui.ams.ams_terms.AmsTermsActivity"></activity>
     </application>
 
 </manifest>

@@ -5,18 +5,26 @@
     <string name="change">Change course</string>
     <string name="course">Course</string>
     <string name="courses">Courses</string>
+    <string name="connection_error">Ошибка подключения</string>
+    <string name="credentials_error">Неправильный логин или пароль</string>
     <string name="exam_rules">Exam rules</string>
+    <string name="email_error">Write id</string>
     <string name="graduate_research">Graduate research</string>
     <string name="hide_desc">Hide description</string>
+    <string name="login">login</string>
     <string name="lunch">LUNCH</string>
     <string name="next">Next</string>
     <string name="overview">Overview</string>
+    <string name="password_error">Write password</string>
     <string name="previous">Previous</string>
     <string name="select">Select</string>
     <string name="show_desc">Show description</string>
     <string name="swipe">Swipe left or right twice if data is not shown</string>
     <string name="update">Update</string>
     <string name="this_function">This function is under development</string>
+    <string name="write_id">Write your ID</string>
+    <string name="write_pass">Write password</string>
+    <string name="write_login">Write id or password</string>
 
     <string name="first_a">1st - A</string>
     <string name="first_b">1st - B</string>
@@ -441,6 +449,9 @@ Telephones for information: 0312 54-92-38, 0312 63-14-25</string>
 
     <!--academic calendar-->
     <string name="academic_calendar_2018_2019">Academic Calendar\n 2018 – 2019</string>
+    <string name="subject">Subject</string>
+    <string name="midterm">Midterm</string>
+    <string name="not_study">You did not study this semester or you studied in the preparatory course</string>
 
     <string-array name="academic_names">
         <item>|FALL SEMESTER</item>
